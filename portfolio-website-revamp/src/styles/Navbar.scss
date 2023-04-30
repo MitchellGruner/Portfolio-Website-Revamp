@@ -1,0 +1,103 @@
+#navbar {
+    .mobile-nav {
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+    
+        .burger-menu {
+            height: 100%;
+            width: 4em;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+    
+        .burger-bar {
+            width: 4em;
+            height: 0.5em;
+            background-color: #976BFF;
+            border-radius: 0.5em;
+        }
+    
+        .menu {
+            width: 100%;
+            height: 50vh;
+            background-color: #EFE8FE;
+            position: absolute;
+            top: 5em;
+            z-index: -1;
+            color: #000;
+            text-align: center;
+            font-size: 1em;
+            padding: 0.5em 0em;
+            border-bottom: 1px solid #000;
+    
+            a {
+                margin: 1em auto;
+            }
+
+            @media (max-width: 399px) {
+                a {
+                    font-size: 1.2em;
+                }
+            }
+
+            @media (min-width: 400px) {
+                a {
+                    font-size: 1.4em;
+                }
+            }
+        }
+
+        .icon {
+            margin-left: 0.5em;
+            color: #976BFF;
+        }
+    
+        /* sliding menu */
+        .hidden {
+            display: none;
+        }
+    
+        .visible {
+            display: inherit;
+        }
+    
+        /* animations for clicked */
+        .burger-bar.clicked:nth-child(1) {
+            transform: rotate(45deg) translate(0.75em, 1.25em);
+            transition: 0.5s ease-in-out;
+        }
+    
+        .burger-bar.clicked:nth-child(2) {
+            transform: scale(0.1);
+            transition: 0.5s ease-in-out;
+        }
+    
+        .burger-bar.clicked:nth-child(3) {
+            transform: rotate(135deg) translate(-0.5em, 1em);
+            transition: 0.5s ease-in-out;
+        }
+    
+        /* animations for unclicked */
+        .burger-bar.unclicked {
+            transform: rotate(0) translate(0);
+            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .desktop-nav {
+            display: none;
+        }
+    }
+
+    @media (min-width: 576px) {
+        .mobile-nav {
+            display: none;
+        }
+    }
+}
