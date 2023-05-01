@@ -24,7 +24,7 @@ const Navbar = () => {
             <nav className="2xl:py-10 flex justify-between">
                 <div className="mobile-nav w-full h-screen">
                     <nav className="w-full h-20 bg-black flex justify-between items-center p-4">
-                        <div className="flex items-center text-xl">
+                        <div className="flex items-center name-div">
                             <h1>Mitchell Gruner</h1>
                             <SiCodeberg className="icon" />
                         </div>
@@ -42,12 +42,18 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="desktop-nav">
-                    <ul className="flex justify-evenly">
-                    <li></li>
-                    <li className="2xl:px-4"><a href="#">Projects</a></li>
-                    <li className="2xl:px-4"><a href="#">Resume</a></li>
-                    <li className="2xl:px-4"><a href="#">Contact</a></li>
-                    </ul>
+                    <nav className="w-full h-20 flex justify-between p-4">
+                        <div className="flex items-center name-div">
+                            <h1>Mitchell Gruner</h1>
+                            <SiCodeberg className="icon" />
+                        </div>
+                        <ul className="flex items-center">
+                            <li></li>
+                            <li className="px-4"><a href="#">Projects</a></li>
+                            <li className="px-4"><a href="#">Resume</a></li>
+                            <li className="px-4"><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </nav>
         </section>
