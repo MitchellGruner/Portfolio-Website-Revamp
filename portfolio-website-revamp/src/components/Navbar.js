@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Link} from "react-scroll";
 import {SiCodeberg} from "react-icons/si";
 
 const Navbar = () => {
@@ -36,9 +37,9 @@ const Navbar = () => {
                     </nav>
 
                     <div className={menuClass}>
-                        <a href="#" className="block text-xl xs:text-2xl">Projects</a>
-                        <a href="#" className="block text-xl xs:text-2xl">Resume</a>
-                        <a href="#" className="block text-xl xs:text-2xl">Contact</a>
+                        <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenu}>About</Link>
+                        <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenu}>Projects</Link>
+                        <Link to="contact" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenu}>Contact</Link>
                     </div>
                 </div>
                 <div className="desktop-nav">
@@ -50,13 +51,13 @@ const Navbar = () => {
                         <ul className="flex items-center">
                             <li></li>
                             <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
-                                <a href="#">Projects</a>
+                                <Link to="about" spy={true} smooth={true} offset={-100} duration={500}>About</Link>
                             </li>
                             <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
-                                <a href="#">Resume</a>
+                                <Link to="projects" spy={true} smooth={true} offset={-100} duration={500}>Projects</Link>
                             </li>
                             <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
-                                <a href="#">Contact</a>
+                                <Link to="contact" spy={true} smooth={true} offset={-100} duration={500}>Contact</Link>
                             </li>
                         </ul>
                     </nav>

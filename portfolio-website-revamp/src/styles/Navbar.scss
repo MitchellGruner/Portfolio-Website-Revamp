@@ -22,7 +22,7 @@
             background-color: #EFE8FE;
             position: absolute;
             top: 5em;
-            z-index: -1;
+            z-index: 0;
             color: #000;
             text-align: center;
             border-bottom: 1px solid #000;
@@ -71,6 +71,16 @@
     .desktop-nav {
         .icon {
             color: #000;
+        }
+        
+        a,
+        a:hover {
+            transition: 0.5s ease-in-out;
+        }
+
+        a:hover {
+            color: #000;
+            cursor: pointer;
         }
     }
 
