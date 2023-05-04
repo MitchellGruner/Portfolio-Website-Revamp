@@ -21,7 +21,7 @@ const Navbar = () => {
     }
     return (
         <section id="navbar" className="min-h-screen text-white font-semibold 2xl:text-xl sticky top-0 z-50">
-            <nav className="2xl:py-10 flex justify-between">
+            <nav className="contents justify-between">
                 <div className="mobile-nav w-full h-screen">
                     <nav className="w-full h-20 bg-black flex justify-between items-center p-4">
                         <div className="flex items-center name-div">
@@ -42,16 +42,22 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="desktop-nav">
-                    <nav className="w-full h-20 flex justify-between p-4">
-                        <div className="flex items-center name-div">
-                            <h1>Mitchell Gruner</h1>
+                    <nav className="h-20 flex justify-between p-4 md:p-6 lg:p-8 xl:p-10 xl:px-16 2xl:p-14 2xl:px-20">
+                        <div className="flex items-center name-div text-lg md:text-2xl 2xl:text-3xl">
+                            <h1 className="mr-2 md:mr-4">Mitchell Gruner</h1>
                             <SiCodeberg className="icon" />
                         </div>
                         <ul className="flex items-center">
                             <li></li>
-                            <li className="px-4"><a href="#">Projects</a></li>
-                            <li className="px-4"><a href="#">Resume</a></li>
-                            <li className="px-4"><a href="#">Contact</a></li>
+                            <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
+                                <a href="#">Projects</a>
+                            </li>
+                            <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
+                                <a href="#">Resume</a>
+                            </li>
+                            <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
+                                <a href="#">Contact</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
