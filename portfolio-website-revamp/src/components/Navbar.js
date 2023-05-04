@@ -23,10 +23,10 @@ const Navbar = () => {
         <section id="navbar" className="min-h-screen text-white font-semibold 2xl:text-xl sticky top-0 z-50">
             <nav className="contents justify-between">
                 <div className="mobile-nav w-full h-screen">
-                    <nav className="w-full h-20 bg-black flex justify-between items-center p-4">
-                        <div className="flex items-center name-div">
+                    <nav className="w-full h-20 bg-black flex justify-between items-center p-4 xs:pl-6">
+                        <div className="flex items-center text-xl xs:text-2xl">
                             <h1>Mitchell Gruner</h1>
-                            <SiCodeberg className="icon" />
+                            <SiCodeberg className="icon ml-2" />
                         </div>
                         <div className="burger-menu" onClick={updateMenu}>
                             <div className={burgerClass}></div>
@@ -36,14 +36,14 @@ const Navbar = () => {
                     </nav>
 
                     <div className={menuClass}>
-                        <a href="#" className="block">Projects</a>
-                        <a href="#" className="block">Resume</a>
-                        <a href="#" className="block">Contact</a>
+                        <a href="#" className="block text-xl xs:text-2xl">Projects</a>
+                        <a href="#" className="block text-xl xs:text-2xl">Resume</a>
+                        <a href="#" className="block text-xl xs:text-2xl">Contact</a>
                     </div>
                 </div>
                 <div className="desktop-nav">
-                    <nav className="h-20 flex justify-between p-4 md:p-6 lg:p-8 xl:p-10 xl:px-16 2xl:p-14 2xl:px-20">
-                        <div className="flex items-center name-div text-lg md:text-2xl 2xl:text-3xl">
+                    <nav className="h-20 flex justify-between p-6 md:p-8 lg:p-10 xl:p-14 xl:px-16 2xl:p-14 2xl:px-20">
+                        <div className="flex items-center text-xl md:text-2xl 2xl:text-3xl">
                             <h1 className="mr-2 md:mr-4">Mitchell Gruner</h1>
                             <SiCodeberg className="icon" />
                         </div>
