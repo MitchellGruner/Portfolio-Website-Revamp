@@ -1,8 +1,23 @@
+"use client";
 import React, {useState} from "react";
 import {Link} from "react-scroll";
 import {SiCodeberg} from "react-icons/si";
 
-const Navbar = () => {
+function NavLinks({
+    link,
+    title,
+}: {
+    link: string;
+    title: string;
+}) {
+    return (
+        <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
+            <Link to={link} spy={true} smooth={true} offset={-100} duration={500}>{title}</Link>
+        </li>
+    );
+}
+
+function Navbar() {
     /* used for changing burger classes */
     const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
     const [menuClass, setMenuClass] = useState("menu hidden");
@@ -20,8 +35,9 @@ const Navbar = () => {
 
         setIsMenuClicked(!isMenuClicked);
     }
+
     return (
-        <section id="navbar" className="min-h-screen text-white font-semibold 2xl:text-xl sticky top-0 z-50">
+        <div id="navbar" className="min-h-screen text-white font-semibold 2xl:text-xl sticky top-0 z-50">
             <nav className="contents justify-between">
                 <div className="mobile-nav w-full h-screen">
                     <nav className="w-full h-20 bg-black flex justify-between items-center p-4 xs:pl-6">
@@ -49,21 +65,14 @@ const Navbar = () => {
                             <SiCodeberg className="icon" />
                         </div>
                         <ul className="flex items-center">
-                            <li></li>
-                            <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
-                                <Link to="about" spy={true} smooth={true} offset={-100} duration={500}>About</Link>
-                            </li>
-                            <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
-                                <Link to="projects" spy={true} smooth={true} offset={-100} duration={500}>Projects</Link>
-                            </li>
-                            <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
-                                <Link to="contact" spy={true} smooth={true} offset={-100} duration={500}>Contact</Link>
-                            </li>
+                            <NavLinks link="about" title="About" />
+                            <NavLinks link="projects" title="Projects" />
+                            <NavLinks link="contact" title="Contact" />
                         </ul>
                     </nav>
                 </div>
             </nav>
-        </section>
+        </div>
     );
 }
 
