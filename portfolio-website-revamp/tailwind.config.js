@@ -15,6 +15,12 @@ module.exports = {
       'xl': '1200px',
       '2xl': '1400px',
     },
+    colors: {
+      'white': '#fff',
+      'black': '#000',
+      'gold': '#EFB763',
+      'red': '#FF1F86',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
