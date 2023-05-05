@@ -12,7 +12,7 @@ function NavLinks({
 }) {
     return (
         <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
-            <Link to={link} spy={true} smooth={true} offset={-100} duration={500} onClick={}>{title}</Link>
+            <Link to={link} spy={true} smooth={true} offset={-100} duration={500}>{title}</Link>
         </li>
     );
 }
