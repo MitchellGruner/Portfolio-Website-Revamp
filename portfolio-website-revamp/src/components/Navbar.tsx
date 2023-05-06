@@ -37,9 +37,9 @@ function Navbar() {
     }
 
     return (
-        <div id="navbar" className="min-h-screen text-white font-semibold 2xl:text-xl sticky top-0 z-50">
+        <div id="navbar" className="text-white font-semibold 2xl:text-xl sticky top-0 z-50">
             <nav className="contents justify-between">
-                <div className="mobile-nav w-full h-screen">
+                <div className="mobile-nav w-full h-auto">
                     <nav className="w-full h-20 bg-black flex justify-between items-center p-4 xs:pl-6">
                         <div className="flex items-center text-xl xs:text-2xl">
                             <h1>Mitchell Gruner</h1>
