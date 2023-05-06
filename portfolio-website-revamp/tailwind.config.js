@@ -20,6 +20,7 @@ module.exports = {
       'black': '#000',
       'gold': '#EFB763',
       'red': '#FF1F86',
+      'purple': '#976BFF',
     },
     extend: {
       backgroundImage: {
