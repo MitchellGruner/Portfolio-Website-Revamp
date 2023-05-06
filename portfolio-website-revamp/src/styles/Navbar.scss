@@ -69,6 +69,8 @@
     }
 
     .desktop-nav {
+        display: none;
+        
         .icon {
             color: #000;
         }
@@ -84,15 +86,13 @@
         }
     }
 
-    @media (max-width: 575px) {
-        .desktop-nav {
-            display: none;
-        }
-    }
-
     @media (min-width: 576px) {
         .mobile-nav {
             display: none;
+        }
+
+        .desktop-nav {
+            display: block;
         }
     }
 }

@@ -1,0 +1,14 @@
+#about {
+    .rounded-full {
+        border: 1px solid #976BFF;
+    }
+
+    .icon,
+    .icon:hover {
+        transition: 0.5s ease-in-out;
+    }
+
+    .icon:hover {
+        color: #000;
+    }
+}

@@ -17,7 +17,7 @@ function NavLinks({
     );
 }
 
-function Navbar() {
+const Navbar = () => {
     /* used for changing burger classes */
     const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
     const [menuClass, setMenuClass] = useState("menu hidden");
@@ -37,13 +37,13 @@ function Navbar() {
     }
 
     return (
-        <div id="navbar" className="min-h-screen text-white font-semibold 2xl:text-xl sticky top-0 z-50">
+        <div id="navbar" className="text-white font-semibold 2xl:text-xl sticky top-0 z-50">
             <nav className="contents justify-between">
-                <div className="mobile-nav w-full h-screen">
+                <div className="mobile-nav w-full h-auto">
                     <nav className="w-full h-20 bg-black flex justify-between items-center p-4 xs:pl-6">
-                        <div className="flex items-center text-xl xs:text-2xl">
-                            <h1>Mitchell Gruner</h1>
-                            <SiCodeberg className="icon ml-2" />
+                        <div className="flex items-center">
+                            <h1 className="text-xl xs:text-2xl"><Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl">Mitchell Gruner</Link></h1>
+                            <SiCodeberg className="icon ml-2 text-xl xs:text-2xl" />
                         </div>
                         <div className="burger-menu" onClick={updateMenu}>
                             <div className={burgerClass}></div>
@@ -60,9 +60,9 @@ function Navbar() {
                 </div>
                 <div className="desktop-nav">
                     <nav className="h-20 flex justify-between p-6 md:p-8 lg:p-10 xl:p-14 xl:px-16 2xl:p-14 2xl:px-20">
-                        <div className="flex items-center text-xl md:text-2xl 2xl:text-3xl">
-                            <h1 className="mr-2 md:mr-4">Mitchell Gruner</h1>
-                            <SiCodeberg className="icon" />
+                        <div className="flex items-center">
+                            <h1 className="mr-2 md:mr-4"><Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl" onClick={updateMenu}>Mitchell Gruner</Link></h1>
+                            <SiCodeberg className="icon text-xl md:text-2xl 2xl:text-3xl" />
                         </div>
                         <ul className="flex items-center">
                             <NavLinks link="about" title="About" />
