@@ -1,7 +1,19 @@
 "use client";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Link} from "react-scroll";
 import {SiCodeberg} from "react-icons/si";
+
+const [offset, setOffset] = useState(0);
+
+useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    // clean up code
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+}, []);
+
+console.log(offset); 
 
 function NavLinks({
     link,
@@ -53,9 +65,9 @@ const Navbar = () => {
                     </nav>
 
                     <div className={menuClass}>
-                        <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenu}>About</Link>
-                        <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenu}>Projects</Link>
-                        <Link to="contact" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenu}>Contact</Link>
+                        <Link to="about" id="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenu}>About</Link>
+                        <Link to="projects" id="projects" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenu}>Projects</Link>
+                        <Link to="contact" id="contact" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenu}>Contact</Link>
                     </div>
                 </div>
                 <div className="desktop-nav">
