@@ -1,7 +1,24 @@
 #projects {
-    .projects-btn-div {
-        a {
-            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    .projects-card-container {
+        .projects-card {
+            background: rgba( 255, 255, 255, 0.2 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 12px );
+            -webkit-backdrop-filter: blur( 12px );
+            border-radius: 10px;
+    
+            a {
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            }
+        }
+
+        .projects-card,
+        .projects-card:hover {
+            transition: 0.5s ease-in-out;
+        }
+
+        .projects-card:hover {
+            background: rgba( 255, 255, 255, 0.4 );
         }
     }
 }
