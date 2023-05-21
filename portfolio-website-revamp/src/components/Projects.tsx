@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
-import ReactPlayer from "react-player";
+import Image, { StaticImageData } from "next/image";
+
 import {BsCardList} from "react-icons/bs";
 import {AiOutlineCloud} from "react-icons/ai";
 import {AiOutlineMobile} from "react-icons/ai";
@@ -7,8 +8,19 @@ import {GiStonePath} from "react-icons/gi";
 import {ImMan} from "react-icons/im";
 import {CiBaseball} from "react-icons/ci";
 
+import QuizList from "../../public/static/images/QuizList.png";
+
+function DemoDisplay (demo) {
+    if (Object.values(demo).toString().length > 0) {
+        return (
+            <a href={Object.values(demo).toString()} className="flex justify-center items-center text-white bg-red rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md">Demo</a>
+        )
+    }
+}
+
 function NavLinks({
-    gif,
+    image,
+    alt,
     titleFirst,
     titleSecond,
     icon,
@@ -17,28 +29,33 @@ function NavLinks({
     code,
     video
 }: {
-    gif: string;
+    image: StaticImageData;
+    alt: string;
     titleFirst: string;
     titleSecond: string;
     icon: ReactNode;
     description: string;
     demo?: string;
-    code?: string;
-    video?: string;
+    code: string;
+    video: string;
 }) {
     return (
-        <div className="flex flex-col p-4">
-            <ReactPlayer url={gif} width="100%" height="100%" controls={true} />
-            <div className="my-4">
-                <div className="flex items-center my-4">
-                    <p className="text-white block mr-4 text-2xl"><span className="text-black font-bold mr-1">{titleFirst}</span>{titleSecond}</p>
-                    <span className="text-white text-2xl md:text-3xl icon">{icon}</span>
+        <div className="projects-card-container flex flex-col md:flex-row p-4 xs:p-5 md:p-6 xs:mx-6 xs:my-10 sm:mx-10 sm:my-14 md:mx-4 md:my-20">
+            <Image
+          className="mx-auto w-48 md:w-60 md:mr-7"
+          src={image}
+          alt={alt}
+        />
+            <div className="projects-card px-3 xs:px-4 py-4 xs:py-5 my-4 xs:my-5">
+                <div className="flex items-center mb-4 xs:mb-5">
+                    <p className="text-white block mr-4 xs:mr-5 text-2xl sm:text-3xl"><span className="text-black font-bold mr-1">{titleFirst}</span>{titleSecond}</p>
+                    <span className="text-white text-xl sm:text-2xl">{icon}</span>
                 </div>
-                <p className="text-white m-1 block text-md">{description}</p>
-                <div className="projects-btn-div flex my-5">
-                    <a href={demo} className="bg-red rounded-full w-20 p-3 mr-3 text-center text-white text-sm">Demo</a>
-                    <a href={code} className="bg-purple rounded-full w-20 p-3 mr-3 text-center text-white text-sm">Code</a>
-                    <a href={video} className="bg-black rounded-full w-20 p-3 text-center text-white text-sm">Video</a>
+                <p className="text-white block m-1 xs:m-2 text-md sm:text-lg">{description}</p>
+                <div className="flex mt-5 xs:mt-6">
+                    <DemoDisplay demo={demo} />
+                    <a href={code} className="flex justify-center items-center text-white bg-purple rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md">Code</a>
+                    <a href={video} className="flex justify-center items-center text-white bg-black rounded-full w-20 sm:w-24 p-3 text-sm sm:text-md">Video</a>
                 </div>
             </div>
         </div>
@@ -47,9 +64,10 @@ function NavLinks({
 
 const Projects = () => {
     return (
-        <div id="projects" className="min-h-screen h-auto mt-6 md:mt-2 mb-8 sm:mb-28 xl:mb-32">
+        <div id="projects" className="min-h-screen h-auto mt-6 md:mt-2">
             <NavLinks 
-                gif="https://www.youtube.com/watch?v=0AWLYyrbZ-Y&t=7s"
+                image={QuizList}
+                alt="QuizList Lifestyle"
                 titleFirst="Quiz"
                 titleSecond="List"
                 icon={<BsCardList />}
@@ -59,7 +77,8 @@ const Projects = () => {
                 video="https://www.youtube.com/watch?v=0AWLYyrbZ-Y&t=7s"
             />
             <NavLinks 
-                gif="https://www.youtube.com/watch?v=PF3A6o_ZkAc"
+                image={QuizList}
+                alt="QuizList Lifestyle"
                 titleFirst="Cloud"
                 titleSecond="Vend"
                 icon={<AiOutlineCloud />}
@@ -68,7 +87,8 @@ const Projects = () => {
                 video="https://www.youtube.com/watch?v=PF3A6o_ZkAc"
             />
             <NavLinks 
-                gif="https://www.youtube.com/watch?v=sZyEqZzVrc8"
+                image={QuizList}
+                alt="QuizList Lifestyle"
                 titleFirst="Mobile"
                 titleSecond="Learning App"
                 icon={<AiOutlineMobile />}
@@ -78,7 +98,8 @@ const Projects = () => {
                 video="https://www.youtube.com/watch?v=sZyEqZzVrc8"
             />
             <NavLinks 
-                gif="https://www.youtube.com/watch?v=0ZhmxCtSjfw"
+                image={QuizList}
+                alt="QuizList Lifestyle"
                 titleFirst="The"
                 titleSecond="Path"
                 icon={<GiStonePath />}
@@ -87,17 +108,19 @@ const Projects = () => {
                 video="https://www.youtube.com/watch?v=0ZhmxCtSjfw"
             />
             <NavLinks 
-                gif="https://www.youtube.com/watch?v=M-pCWe8rcik"
+                image={QuizList}
+                alt="QuizList Lifestyle"
                 titleFirst="Hangman"
                 titleSecond="!"
                 icon={<ImMan />}
-                description="A vanilla JavaScript application that implements HTML and CSS, as well as the Bootstrap framework, that allows end-users to guess letters that are located within a randomly picked word from a pre-defined array. The user may have hints displayed to them, but they all cost the user time - once the time runs out, the game is over. If the user runs out of lives, the game is also over."
+                description="A vanilla JavaScript application that implements HTML and CSS, as well as the Bootstrap framework, that allows end-users to guess letters that are located within a randomly picked word from a pre-defined array. The user may have hints displayed to them, but they all cost the user time - Once the time runs out, the game is over. If the user runs out of lives, the game is also over."
                 demo="https://clever-galileo-8dbff3.netlify.app/"
                 code="https://github.com/MitchellGruner/Hangman"
                 video="https://www.youtube.com/watch?v=M-pCWe8rcik"
             />
             <NavLinks 
-                gif="https://www.youtube.com/watch?v=xojmvRTKvEg"
+                image={QuizList}
+                alt="QuizList Lifestyle"
                 titleFirst="Baseball"
                 titleSecond="Analytics"
                 icon={<CiBaseball />}
