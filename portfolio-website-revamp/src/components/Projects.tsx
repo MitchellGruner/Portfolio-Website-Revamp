@@ -40,9 +40,9 @@ function NavLinks({
     video: string;
 }) {
     return (
-        <div className="projects-card-container flex flex-col md:flex-row p-4 xs:p-5 md:p-6 xs:mx-6 xs:my-10 sm:mx-10 sm:my-14 md:mx-4 md:my-20">
+        <div className="projects-card-container flex flex-col lg:flex-row p-4 xs:p-5 md:p-6 xs:mx-6 xs:my-10 sm:mx-10 md:mx-14 lg:mx-8 md:my-12">
             <Image
-          className="mx-auto w-48 md:w-60 md:mr-7"
+          className="mx-auto w-48 md:w-72"
           src={image}
           alt={alt}
         />
