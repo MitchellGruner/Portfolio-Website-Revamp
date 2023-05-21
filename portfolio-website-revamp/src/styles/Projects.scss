@@ -21,4 +21,18 @@
             background: rgba( 255, 255, 255, 0.4 );
         }
     }
+
+    @media (min-width: 992px) {
+        .projects-card-container:nth-child(odd) {
+            flex-flow: row-reverse;
+    
+            .projects-card {
+                margin-right: 1.2em;
+            }
+        }
+    
+        .projects-card-container:nth-child(even) img {
+            margin-right: 1.2em;
+        }
+    }
 }
