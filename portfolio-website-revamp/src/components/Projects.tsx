@@ -1,14 +1,19 @@
 import React, { ReactNode } from "react";
 import Image, { StaticImageData } from "next/image";
 
-import {BsCardList} from "react-icons/bs";
-import {AiOutlineCloud} from "react-icons/ai";
-import {AiOutlineMobile} from "react-icons/ai";
-import {GiStonePath} from "react-icons/gi";
-import {ImMan} from "react-icons/im";
-import {CiBaseball} from "react-icons/ci";
+// import {BsCardList} from "react-icons/bs";
+// import {AiOutlineCloud} from "react-icons/ai";
+// import {AiOutlineMobile} from "react-icons/ai";
+// import {GiStonePath} from "react-icons/gi";
+// import {ImMan} from "react-icons/im";
+// import {CiBaseball} from "react-icons/ci";
 
-import QuizList from "../../public/static/images/QuizList.png";
+import QuizList from "../../public/static/images/quizlist1.png";
+import CloudVend from "../../public/static/images/cloudvend1.png";
+import MobileLearningApp from "../../public/static/images/mobile-learning-app.png";
+import BaseballAggressiveAnalytics from "../../public/static/images/baseball-aggressive-analytics.png";
+import Hangman from "../../public/static/images/hangman.png";
+import ThePath from "../../public/static/images/thepath.png";
 
 function DemoDisplay (demo) {
     if (Object.values(demo).toString().length > 0) {
@@ -62,10 +67,32 @@ function NavLinks({
     );
 }
 
+function ProjectLogo({
+    logo,
+    alt,
+    link
+}: {
+    logo: StaticImageData;
+    alt: string;
+    link: string;
+}) {
+    return (
+        <div className="project-logo-container mx-auto mb-6 xs:mb-8 md:mb-8 lg:mb-10">
+            <a href={link} className="flex mx-12 xs:mx-4 sm:mx-10 md:mx-6 lg:mx-4">
+                <Image
+                    className="mx-auto"
+                    src={logo}
+                    alt={alt}
+                />
+            </a>
+        </div>
+    )
+}
+
 const Projects = () => {
     return (
-        <div id="projects" className="min-h-screen h-auto mt-6 md:mt-2">
-            <NavLinks 
+        <div id="projects" className="h-auto mt-2 mb-16 xs:mb-20 sm:mb-24 md:mb-32 md:mt-2 lg:mb-36 xl:mb-40 2xl:mb-44">
+            {/* <NavLinks 
                 image={QuizList}
                 alt="QuizList Lifestyle"
                 titleFirst="Quiz"
@@ -127,7 +154,15 @@ const Projects = () => {
                 description="A data analytics project that implements statistical concepts on a large data set to prove that players have become more aggressive over time. This project was built using the R programming language, and it takes in a single statistical file for input. The data file was taken from Kaggle.com, and it houses all batters that have batted from 1871 to 2015 in Major League Baseball."
                 code="https://github.com/MitchellGruner/Baseball_Aggressive_Analytics"
                 video="https://www.youtube.com/watch?v=xojmvRTKvEg"
-            />
+            /> */}
+            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xs:gap-2 sm:gap-4 lg:gap-6 xs:mx-4 sm:mx-6 md:mx-8 lg:mx-32 xl:mx-36">
+                <ProjectLogo logo={QuizList} alt="QuizList Logo" link="asdf" />
+                <ProjectLogo logo={CloudVend} alt="QuizList Logo" link="asdf" />
+                <ProjectLogo logo={MobileLearningApp} alt="QuizList Logo" link="asdf" />
+                <ProjectLogo logo={ThePath} alt="QuizList Logo" link="asdf" />
+                <ProjectLogo logo={Hangman} alt="QuizList Logo" link="asdf" />
+                <ProjectLogo logo={BaseballAggressiveAnalytics} alt="QuizList Logo" link="asdf" />
+            </div>
         </div>
     );
 }
