@@ -7,7 +7,7 @@ import AboutImage from "../../public/static/images/about-profile.png";
 
 const About = () => {
     return (
-        <div id="about" className="min-h-screen h-auto mt-6 md:mt-2">
+        <div id="about" className="h-auto mt-2 mb-16 xs:mb-20 sm:mb-24 md:mb-32 md:mt-2 lg:mb-36 xl:mb-40 2xl:mb-44">
             <div className="text-center sm:mx-32 md:mx-42 lg:mx-56 xl:mx-80 2xl:mx-96">
                 <h2 className="text-3xl xs:text-4xl md:text-5xl 2xl:text-6xl font-bold text-white">Mitchell Gruner</h2>
                 <span className="text-xl mt-2 xs:text-2xl md:text-3xl 2xl:text-4xl font-bold text-black block">Front End Developer</span>
