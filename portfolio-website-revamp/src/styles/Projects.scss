@@ -1,0 +1,85 @@
+#projects {
+    .projects-card-container {
+        .projects-card {
+            background: rgba( 255, 255, 255, 0.2 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 12px );
+            -webkit-backdrop-filter: blur( 12px );
+            border-radius: 10px;
+    
+            a {
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            }
+        }
+
+        .projects-card,
+        .projects-card:hover {
+            transition: 0.5s ease-in-out;
+        }
+
+        .projects-card:hover {
+            background: rgba( 255, 255, 255, 0.4 );
+        }
+    }
+
+    @media (min-width: 992px) {
+        .projects-card-container:nth-child(odd) {
+            flex-flow: row-reverse;
+    
+            .projects-card {
+                margin-right: 1.2em;
+            }
+        }
+    
+        .projects-card-container:nth-child(even) img {
+            margin-right: 1.2em;
+        }
+    }
+
+    .project-logo-container {
+        a {
+            background: rgba( 255, 255, 255, 0.2 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 12px );
+            -webkit-backdrop-filter: blur( 12px );
+            border-radius: 10px;
+
+            :first-child {
+                padding: 1.8em;
+            }
+
+            @media (min-width: 400px) {
+                :first-child {
+                    padding: 1em;
+                }
+            }
+
+            @media (min-width: 768px) {
+                :first-child {
+                    padding: 1.4em;
+                }
+            }
+
+            @media (min-width: 992px) {
+                :first-child {
+                    padding: 2em;
+                }
+            }
+
+            @media (min-width: 1400px) {
+                :first-child {
+                    padding: 3em;
+                }
+            }
+        }
+
+        a,
+        a:hover {
+            transition: 0.5s ease-in-out;
+        }
+
+        a:hover {
+            background: rgba( 255, 255, 255, 0.4 );
+        }
+    }
+}

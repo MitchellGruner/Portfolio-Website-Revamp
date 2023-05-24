@@ -1,4 +1,6 @@
 #navbar {
+    transition: 0.5s ease-in-out;
+
     .mobile-nav {
         .burger-menu {
             height: 100%;
@@ -73,6 +75,7 @@
         
         .icon {
             color: #000;
+            transition: 0.5s ease-in-out;
         }
         
         a,
@@ -93,6 +96,22 @@
 
         .desktop-nav {
             display: block;
+        }
+    }
+}
+
+#navbar.navbar-container {
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: 0.5s ease-in-out;
+
+    .desktop-nav {
+        .icon {
+            color: #976BFF;
+            transition: 0.5s ease-in-out;
+        }
+
+        a:hover {
+            color: #976BFF;
         }
     }
 }
