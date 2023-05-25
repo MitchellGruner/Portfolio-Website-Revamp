@@ -44,32 +44,22 @@
             -webkit-backdrop-filter: blur( 12px );
             border-radius: 10px;
 
-            :first-child {
-                padding: 1.8em;
-            }
+            padding: 1.8em;
 
             @media (min-width: 400px) {
-                :first-child {
-                    padding: 1em;
-                }
+                padding: 1em;
             }
 
             @media (min-width: 768px) {
-                :first-child {
-                    padding: 1.4em;
-                }
+                padding: 1.4em;
             }
 
             @media (min-width: 992px) {
-                :first-child {
-                    padding: 2em;
-                }
+                padding: 2em;
             }
 
             @media (min-width: 1400px) {
-                :first-child {
-                    padding: 3em;
-                }
+                padding: 3em;
             }
         }
 
