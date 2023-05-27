@@ -39,12 +39,12 @@ const Projects = () => {
             </div>
 
             <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xs:gap-2 sm:gap-4 lg:gap-6 xs:mx-4 sm:mx-6 md:mx-8 lg:mx-32 xl:mx-36">
-                <ProjectLogo logo={QuizList} alt="QuizList Logo" link="" />
-                <ProjectLogo logo={CloudVend} alt="CloudVend Logo" link="" />
-                <ProjectLogo logo={MobileLearningApp} alt="Mobile Learning App Logo" link="" />
-                <ProjectLogo logo={ThePath} alt="The Path Logo" link="" />
-                <ProjectLogo logo={Hangman} alt="Hangman Logo" link="" />
-                <ProjectLogo logo={BaseballAggressiveAnalytics} alt="Baseball Aggressive Analytics Logo" link="" />
+                <ProjectLogo logo={QuizList} alt="QuizList Logo" link="/projects/quiz-list" />
+                <ProjectLogo logo={CloudVend} alt="CloudVend Logo" link="/projects/cloud-vend" />
+                <ProjectLogo logo={MobileLearningApp} alt="Mobile Learning App Logo" link="/projects/mobile-learning-app" />
+                <ProjectLogo logo={ThePath} alt="The Path Logo" link="/projects/the-path" />
+                <ProjectLogo logo={Hangman} alt="Hangman Logo" link="/projects/hangman" />
+                <ProjectLogo logo={BaseballAggressiveAnalytics} alt="Baseball Aggressive Analytics Logo" link="/projects/baseball-aggressive-analytics" />
             </div>
         </div>
     );
