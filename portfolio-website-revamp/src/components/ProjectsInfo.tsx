@@ -67,15 +67,19 @@ function NavLinks({
 }
 
 const ProjectsInfo = (props) => {
-    <NavLinks
-        key={props.key}
-        image={props.image}
-        name={props.name}
-        description={props.description}
-        demo={props.demo}
-        code={props.code}
-        video={props.video}
-    />
+    return (
+        <div>
+            <NavLinks
+                key={props.key}
+                image={props.image}
+                name={props.name}
+                description={props.description}
+                demo={props.demo}
+                code={props.code}
+                video={props.video}
+            />
+        </div>
+    )
 }
 
 export default ProjectsInfo;
