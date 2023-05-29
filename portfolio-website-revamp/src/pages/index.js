@@ -2,7 +2,6 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
 import Projects from "../components/Projects";
-import ProjectsInfo from "../components/ProjectsInfo";
 import Contact from "../components/Contact";
 
 import productDetailsData from "../data/project-details.json";
@@ -15,7 +14,7 @@ export async function getStaticProps(context) {
   };
 }
 
-export default function Home(props) {
+const Home = (props) => {
   return (
     <div className="m-auto">
       <Head>
@@ -26,9 +25,9 @@ export default function Home(props) {
 
       <div className="2xl:max-w-screen-2xl m-auto">
         <About />
-        <Projects />
+        <Projects productDetails={props} />
   
-        <div id="projectsInfo" className="h-auto mt-2 mb-16 xs:mb-20 sm:mb-24 md:mb-32 md:mt-2 lg:mb-36 xl:mb-40 2xl:mb-44">
+        {/* <div id="projectsInfo" className="h-auto mt-2 mb-16 xs:mb-20 sm:mb-24 md:mb-32 md:mt-2 lg:mb-36 xl:mb-40 2xl:mb-44">
           {props.productDetails.map((productDetails) => {
             return (
               <ProjectsInfo
@@ -42,10 +41,12 @@ export default function Home(props) {
               />
             );
           })}
-        </div>
+        </div> */}
 
         <Contact />
       </div>
     </div>
   )
 }
+
+export default Home;
