@@ -1,8 +1,8 @@
 [
     {
       "id": 0,
-      "link": "/projects/quiz-list",
-      "image": "",
+      "image": "quizlist1.png",
+      "alt": "Quiz List Logo",
       "name": "Quiz List",
       "description": "A quiz game created using React.js that allows users to guess an answer to a question in an accordion-style dropdown. If the answer is correct, the user is allowed to continue playing to try and beat their high score. However, if a question is not correctly answered, the game is over and their score gets set to zero.",
       "demo": "https://master--vermillion-narwhal-b9ab97.netlify.app/",
@@ -11,8 +11,8 @@
     },
     {
         "id": 1,
-        "link": "/projects/cloud-vend",
-        "image": "",
+        "image": "cloudvend1.png",
+        "alt": "Cloud Vend Logo",
         "name": "Cloud Vend",
         "description": "A full-stack web application that allows authenticated users to create profiles, post descriptive items, and post comments on items. Authenticated users can also edit and delete their own items and comments, but can never erase other authenticated user's data. MongoDB, Node.js, and Express.js was used throughout, as well as Passport.js for user authentication.",
         "demo": "https://master--vermillion-narwhal-b9ab97.netlify.app/",
@@ -21,8 +21,8 @@
       },
       {
         "id": 2,
-        "link": "/projects/mobile-learning-app",
-        "image": "",
+        "image": "mobile-learning-app.png",
+        "alt": "Mobile Learning App Logo",
         "name": "Mobile Learning App",
         "description": "A React Native application that allows “Subject Matter Experts” (SME) to post courses, videos, lecture notes, and quizzes to students who are currently enrolled in their course. This application implements the Firebase Realtime Database to store user information. The student's and SME's credentials are also stored within the database. This project was created by a group of six members who carried out their work in two-week long sprints in an Agile environment.",
         "demo": "https://expo.dev/@calialex/Mobile-Learning-App",
@@ -31,8 +31,8 @@
       },
       {
         "id": 3,
-        "link": "/projects/the-path",
-        "image": "",
+        "image": "thepath.png",
+        "alt": "The Path Logo",
         "name": "The Path",
         "description": "An Object-Oriented Programming in Java application that allows users to control an “ant” that must evade “spiders” in the game world. The user must collide with “flags” and “food stations” in order to succeed, and the movements of all of the game objects are clearly visible in a container within an iPad III emulator. This application uses a library that closely resembles Java Swing.",
         "demo": "https://master--vermillion-narwhal-b9ab97.netlify.app/",
@@ -41,8 +41,8 @@
       },
       {
         "id": 4,
-        "link": "/projects/hangman",
-        "image": "",
+        "image": "hangman.png",
+        "alt": "Hangman Logo",
         "name": "Hangman!",
         "description": "A vanilla JavaScript application that implements HTML and CSS, as well as the Bootstrap framework, that allows end-users to guess letters that are located within a randomly picked word from a pre-defined array. The user may have hints displayed to them, but they all cost the user time - Once the time runs out, the game is over. If the user runs out of lives, the game is also over.",
         "demo": "https://clever-galileo-8dbff3.netlify.app/",
@@ -51,8 +51,8 @@
       },
       {
         "id": 5,
-        "link": "/projects/baseball-aggressive-analytics",
-        "image": "",
+        "image": "baseball-aggressive-analytics.png",
+        "alt": "Baseball Aggressive Analytics Logo",
         "name": "Baseball Aggressive Analytics",
         "description": "A data analytics project that implements statistical concepts on a large data set to prove that players have become more aggressive over time. This project was built using the R programming language, and it takes in a single statistical file for input. The data file was taken from Kaggle.com, and it houses all batters that have batted from 1871 to 2015 in Major League Baseball.",
         "demo": "https://master--vermillion-narwhal-b9ab97.netlify.app/",
