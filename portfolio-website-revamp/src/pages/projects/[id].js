@@ -1,33 +1,41 @@
 import {useRouter} from 'next/router';
-import Link from "next/link";
-import Head from "next/head";
-
 import productDetailsData from "../../data/project-details.json";
 
-// export function getStaticProps(staticProps) {
-//     const params = staticProps.params;
+export function getStaticProps(staticProps) {
+    const params = staticProps.params;
 
-//     return {
-//         props: {
-//             productDetails: productDetailsData.find((productDetails) => {
-//                 return productDetails.id === 0;
-//             }),
-//         },
-//     };
-// }
+    return {
+        props: {
+            productDetails: productDetailsData.find((productDetails) => {
+                return productDetails.id.toString() === params.id;
+            })
+        }
+    }
+}
 
-// export function getStaticPaths() {
-//     return {
-//         paths: [{ params: { id: "0"}}, { params: { id: "1"}}],
-//         fallback: false,
-//     }
-// }
+export function getStaticPaths() {
+    return {
+        paths: [
+            {params: {id: "0"}},
+            {params: {id: "1"}},
+            {params: {id: "2"}},
+            {params: {id: "3"}},
+            {params: {id: "4"}},
+            {params: {id: "5"}}
+        ],
+        fallback: false,
+    }
+}
 
 const ProductDetails = (props) => {
-    console.log("props", props);
+    const router = useRouter();
+    
     return (
-        <div>Hello</div>
-    )
+        <div>
+            <h1>Product Details: {router.query.id}</h1>
+            <p>Name: {props.productDetails.name}</p>
+        </div>
+    );
 };
 
 export default ProductDetails;
