@@ -1,3 +1,5 @@
+import ProjectsInfo from '../../components/ProjectsInfo';
+
 import {useRouter} from 'next/router';
 import productDetailsData from "../../data/project-details.json";
 
@@ -32,8 +34,7 @@ const ProductDetails = (props) => {
     
     return (
         <div>
-            <h1>Product Details: {router.query.id}</h1>
-            <p>Name: {props.productDetails.name}</p>
+            <ProjectsInfo project={props} />
         </div>
     );
 };
