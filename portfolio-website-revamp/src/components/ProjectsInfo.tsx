@@ -1,9 +1,11 @@
 import React from "react";
+import dynamic from 'next/dynamic';
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 function DemoDisplay (demo) {
     if (Object.values(demo).toString().length > 0) {
         return (
-            <a href={Object.values(demo).toString()} className="flex justify-center items-center text-white bg-red rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md">Demo</a>
+            <a href={Object.values(demo).toString()} className="flex justify-center items-center text-white bg-red rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md 2xl:text-lg">Demo</a>
         )
     }
 }
@@ -23,27 +25,37 @@ function NavLinks({
     titleFirst: string;
     titleSecond: string;
     description: string;
-    demo: string;
+    demo?: string;
     code: string;
     video: string;
 }) {
     return (
-        <div className="projects-card-container flex flex-col lg:flex-row p-4 xs:p-5 md:p-6 xs:mx-6 xs:my-10 sm:mx-10 md:mx-14 lg:mx-8 md:my-12">
-            <img
-                className="mx-auto w-48 md:w-72"
-                src={`/static/images/${image}`}
-                alt={alt}
-            />
-            <div className="projects-card px-3 xs:px-4 py-4 xs:py-5 my-4 xs:my-5">
-                <div className="flex items-center mb-4 xs:mb-5">
-                    <p className="text-white block mr-4 xs:mr-5 text-2xl sm:text-3xl"><span className="text-black font-bold mr-1">{titleFirst}</span>{titleSecond}</p>
-                    {/* <span className="text-white text-xl sm:text-2xl">{icon}</span> */}
+        <div id="projects-info">
+            <div className="projects-card-container p-4 xs:p-5 md:p-6 xs:mx-6 xs:mt-10 sm:mx-10 md:mx-14 lg:mx-8 md:my-12">
+                <img
+                    className="mx-auto w-48 md:w-72"
+                    src={`/static/images/${image}`}
+                    alt={alt}
+                />
+                <div className="projects-card-video-container">
+                    <ReactPlayer 
+                        className="projects-card-video m-auto my-8"
+                        url={video} 
+                    />
                 </div>
-                <p className="text-white block m-1 xs:m-2 text-md sm:text-lg">{description}</p>
-                <div className="flex mt-5 xs:mt-6">
-                    <DemoDisplay demo={demo} />
-                    <a href={code} className="flex justify-center items-center text-white bg-purple rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md">Code</a>
-                    <a href={video} className="flex justify-center items-center text-white bg-black rounded-full w-20 sm:w-24 p-3 text-sm sm:text-md">Video</a>
+                <div className="projects-card px-3 xs:px-4 py-4 xs:py-5 my-4 xs:my-5">
+                    <div className="flex items-center mb-4 xs:mb-5">
+                        <p className="text-white block mr-4 xs:mr-5 text-2xl sm:text-3xl 2xl:text-4xl"><span className="text-black font-bold mr-1">{titleFirst}</span>{titleSecond}</p>
+                        {/* <span className="text-white text-xl sm:text-2xl">{icon}</span> */}
+                    </div>
+                    <p className="text-white block m-1 xs:m-2 text-md sm:text-lg 2xl:text-xl">{description}</p>
+                    <div className="flex mt-5 xs:mt-6">
+                        <DemoDisplay demo={demo} />
+                        <a href={code} className="flex justify-center items-center text-white bg-black rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md 2xl:text-lg">Code</a>
+                    </div>
+                </div>
+                <div className="projects-card-go-back-btn flex justify-end">
+                    <a href="/" className="right-0 flex justify-center items-center text-white bg-purple rounded-full w-28 xs:w-40 sm:w-52 xl:w-60 p-3 mt-4 md:right-0 md:absolute text-sm sm:text-md 2xl:text-lg">Go Back</a>
                 </div>
             </div>
         </div>
