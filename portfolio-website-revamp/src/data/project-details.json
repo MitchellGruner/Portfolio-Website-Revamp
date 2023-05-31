@@ -17,7 +17,6 @@
         "titleFirst": "Cloud",
         "titleSecond": "Vend",
         "description": "A full-stack web application that allows authenticated users to create profiles, post descriptive items, and post comments on items. Authenticated users can also edit and delete their own items and comments, but can never erase other authenticated user's data. MongoDB, Node.js, and Express.js was used throughout, as well as Passport.js for user authentication.",
-        "demo": "https://master--vermillion-narwhal-b9ab97.netlify.app/",
         "code": "https://github.com/MitchellGruner/CloudVend",
         "video": "https://www.youtube.com/watch?v=PF3A6o_ZkAc"
       },
@@ -39,7 +38,6 @@
         "titleFirst": "The",
         "titleSecond": "Path",
         "description": "An Object-Oriented Programming in Java application that allows users to control an “ant” that must evade “spiders” in the game world. The user must collide with “flags” and “food stations” in order to succeed, and the movements of all of the game objects are clearly visible in a container within an iPad III emulator. This application uses a library that closely resembles Java Swing.",
-        "demo": "https://master--vermillion-narwhal-b9ab97.netlify.app/",
         "code": "https://github.com/MitchellGruner/-The-Path-OOP-Java-Project",
         "video": "https://www.youtube.com/watch?v=0ZhmxCtSjfw"
       },
@@ -61,7 +59,6 @@
         "titleFirst": "Baseball",
         "titleSecond": "Aggressive Analytics",
         "description": "A data analytics project that implements statistical concepts on a large data set to prove that players have become more aggressive over time. This project was built using the R programming language, and it takes in a single statistical file for input. The data file was taken from Kaggle.com, and it houses all batters that have batted from 1871 to 2015 in Major League Baseball.",
-        "demo": "https://master--vermillion-narwhal-b9ab97.netlify.app/",
         "code": "https://github.com/MitchellGruner/Baseball_Aggressive_Analytics",
         "video": "https://www.youtube.com/watch?v=xojmvRTKvEg"
       }
