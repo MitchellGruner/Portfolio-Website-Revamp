@@ -1,0 +1,96 @@
+#projects-info {
+    .projects-card-container {
+        .projects-card-video-container {
+            .projects-card-video {
+                height: auto !important;
+            }
+        }
+
+        .projects-card {
+            background: rgba( 255, 255, 255, 0.2 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 12px );
+            -webkit-backdrop-filter: blur( 12px );
+            border-radius: 10px;
+        }
+
+        a {
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+
+        .projects-card,
+        .projects-card:hover {
+            transition: 0.5s ease-in-out;
+        }
+
+        .projects-card:hover {
+            background: rgba( 255, 255, 255, 0.4 );
+        }
+
+        @media (max-width: 992px) {
+            .projects-card-video-container {
+                .projects-card-video {
+                    width: 100% !important;
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            margin-bottom: 50em;
+
+            .projects-card-video-container,
+            .projects-card,
+            .projects-card-go-back-btn {
+                position: absolute;
+            }
+
+            .projects-card {
+                top: 28em;
+                margin: auto 2.2em auto 4.2em;
+            }
+
+            .projects-card-video-container {
+                left: 2.2em;
+                top: 50em;
+            }
+
+            .projects-card-go-back-btn {
+                top: 66em;
+                right: 0;
+                margin-right: 2.2em;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            margin-bottom: 70em;
+
+            .projects-card-video-container {
+                left: 7em;
+                top: 58em;
+            }
+    
+            .projects-card {
+                top: 30em;
+            }
+
+            .projects-card-go-back-btn {
+                top: 78em;
+                margin-right: 7em;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .projects-card-container:nth-child(odd) {
+            flex-flow: row-reverse;
+    
+            .projects-card {
+                margin: auto 5.2em auto 29em;
+            }
+        }
+    
+        .projects-card-container:nth-child(even) img {
+            margin-right: 1.2em;
+        }
+    }
+}
