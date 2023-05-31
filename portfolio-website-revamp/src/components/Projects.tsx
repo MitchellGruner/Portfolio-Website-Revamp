@@ -23,7 +23,6 @@ function ProjectLogo({
 }
 
 const Projects = (props) => {
-    console.log("props", props);
     return (
         <div id="projects" className="h-auto mt-2 mb-16 xs:mb-20 sm:mb-24 md:mb-32 md:mt-2 lg:mb-36 xl:mb-40 2xl:mb-44">
             <div className="text-center mx-4 sm:mx-32 md:mx-42 lg:mx-56 xl:mx-80">
