@@ -36,8 +36,6 @@
         }
 
         @media (min-width: 768px) {
-            margin-bottom: 50em;
-
             .projects-card-video-container,
             .projects-card,
             .projects-card-go-back-btn {
@@ -45,36 +43,25 @@
             }
 
             .projects-card {
-                top: 28em;
                 margin: auto 2.2em auto 4.2em;
             }
 
             .projects-card-video-container {
                 left: 2.2em;
-                top: 50em;
             }
 
             .projects-card-go-back-btn {
-                top: 66em;
                 right: 0;
                 margin-right: 2.2em;
             }
         }
 
         @media (min-width: 1400px) {
-            margin-bottom: 70em;
-
             .projects-card-video-container {
                 left: 7em;
-                top: 58em;
-            }
-    
-            .projects-card {
-                top: 30em;
             }
 
             .projects-card-go-back-btn {
-                top: 78em;
                 margin-right: 7em;
             }
         }
