@@ -2,6 +2,22 @@ import React from "react";
 import dynamic from 'next/dynamic';
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
+import {BsCardList} from "react-icons/bs";
+import {AiOutlineCloud} from "react-icons/ai";
+import {AiOutlineMobile} from "react-icons/ai";
+import {GiStonePath} from "react-icons/gi";
+import {ImMan} from "react-icons/im";
+import {CiBaseball} from "react-icons/ci";
+
+let iconArray = [
+    <BsCardList />,
+    <AiOutlineCloud />,
+    <AiOutlineMobile />,
+    <GiStonePath />,
+    <ImMan />,
+    <CiBaseball />
+]
+
 function DemoDisplay (demo) {
     if (Object.values(demo).toString().length > 0) {
         return (
@@ -11,6 +27,7 @@ function DemoDisplay (demo) {
 }
 
 function NavLinks({
+    id,
     image,
     alt,
     titleFirst,
@@ -20,6 +37,7 @@ function NavLinks({
     code,
     video
 }: {
+    id: number;
     image: string;
     alt: string;
     titleFirst: string;
@@ -46,7 +64,7 @@ function NavLinks({
                 <div className="projects-card px-3 xs:px-4 py-4 xs:py-5 my-4 xs:my-5">
                     <div className="flex items-center mb-4 xs:mb-5">
                         <p className="text-white block mr-4 xs:mr-5 text-2xl sm:text-3xl 2xl:text-4xl"><span className="text-black font-bold mr-1">{titleFirst}</span>{titleSecond}</p>
-                        {/* <span className="text-white text-xl sm:text-2xl">{icon}</span> */}
+                        <span className="text-white text-xl sm:text-2xl">{iconArray[id]}</span>
                     </div>
                     <p className="text-white block m-1 xs:m-2 text-md sm:text-lg 2xl:text-xl">{description}</p>
                     <div className="flex mt-5 xs:mt-6">
@@ -67,6 +85,7 @@ const ProjectsInfo = (props) => {
         <div>
             <NavLinks
                 key={props.project.productDetails.id}
+                id={props.project.productDetails.id}
                 image={props.project.productDetails.image}
                 alt={props.project.productDetails.alt}
                 titleFirst={props.project.productDetails.titleFirst}
