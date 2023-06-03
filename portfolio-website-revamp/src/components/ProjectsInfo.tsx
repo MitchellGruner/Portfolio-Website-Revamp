@@ -62,7 +62,7 @@ function NavLinks({
                         url={video} 
                     />
                 </div>
-                <div id="projects-card" className="projects-card px-3 xs:px-4 py-4 xs:py-5 my-4 xs:my-5">
+                <div id="projects-card" className="projects-card px-3 2xl:px-7 xs:px-4 py-4 2xl:py-6 xs:py-5 my-4 xs:my-5">
                     <div className="flex items-center mb-4 xs:mb-5">
                         <p className="text-white block mr-4 xs:mr-5 text-2xl sm:text-3xl 2xl:text-4xl"><span className="text-black font-bold mr-1">{titleFirst}</span>{titleSecond}</p>
                         <span className="text-white text-xl sm:text-2xl">{iconArray[id]}</span>
@@ -73,7 +73,7 @@ function NavLinks({
                         <a href={code} className="flex justify-center items-center text-white bg-black rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md 2xl:text-lg">Code</a>
                     </div>
                 </div>
-                <div id="projects-back" className="projects-card-go-back-btn flex justify-end">
+                <div id="projects-back" className="projects-card-go-back-btn justify-end">
                     <a href="/" className="right-0 flex justify-center items-center text-white bg-purple rounded-full w-28 xs:w-40 sm:w-52 xl:w-60 p-3 mt-4 md:right-0 md:absolute text-sm sm:text-md 2xl:text-lg">Go Back</a>
                 </div>
             </div>
@@ -101,6 +101,8 @@ const ProjectsInfo = (props) => {
 }
 
 if (typeof document !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
+    document.getElementById("projects-back").style.display = "none";
+
     setTimeout(() => {
         let projectsInfoHeight = document.getElementById("projects-info").offsetHeight;
         let projectsCardHeight = document.getElementById("projects-card").offsetHeight;
@@ -108,12 +110,26 @@ if (typeof document !== "undefined" && window.matchMedia("(min-width: 768px)").m
 
         let projectsCard = document.getElementById("projects-card");
         let projectsCardVideo = document.getElementById("projects-card-video");
-        let projectsBack = document.getElementById("projects-back");
         let projectsOffset = 100;
 
         projectsCard.style.top = (projectsInfoHeight + projectsOffset).toString() + "px";
-        projectsCardVideo.style.top = (projectsInfoHeight + projectsCardHeight + projectsOffset).toString() + "px";
-        projectsBack.style.top = (projectsInfoHeight + projectsCardHeight + projectsVideoHeight + projectsOffset).toString() + "px";
+
+        if (window.matchMedia("(max-width: 991px)").matches) {
+            projectsCardVideo.style.top = (projectsInfoHeight + projectsCardHeight + projectsOffset).toString() + "px";
+        } else {
+            projectsCardVideo.style.top = (projectsInfoHeight + projectsCardHeight + (projectsOffset * 1.5)).toString() + "px";
+        }
+
+        setTimeout(() => {
+            document.getElementById("projects-back").style.display = "flex";
+            let projectsBack = document.getElementById("projects-back");
+
+            projectsBack.style.top = (projectsInfoHeight + projectsCardHeight + projectsVideoHeight + (projectsOffset * 1.5)).toString() + "px";
+
+            if (window.matchMedia("(min-width: 992px)").matches) {
+                projectsBack.style.paddingBottom = projectsOffset.toString() + "px";
+            }
+        }, 3000);
     }, 1000);
 }
 
