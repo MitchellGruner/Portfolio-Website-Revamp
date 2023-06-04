@@ -1,5 +1,11 @@
 #navbar {
     transition: 0.5s ease-in-out;
+    width: -webkit-fill-available;
+
+    #nav-projects-mobile,
+    #nav-projects-desktop {
+        display: none;
+    }
 
     .mobile-nav {
         .burger-menu {
