@@ -33,7 +33,7 @@ const ProductDetails = (props) => {
     const router = useRouter();
     
     return (
-        <div>
+        <div className="pt-24 xs:pt-14 sm:pt-8">
             <ProjectsInfo project={props} />
         </div>
     );
