@@ -3,6 +3,22 @@ import React, {useState} from "react";
 import {Link} from "react-scroll";
 import {SiCodeberg} from "react-icons/si";
 
+if (typeof window !== 'undefined' && typeof document !== "undefined") {
+    const hostname = window.location.href.indexOf("/projects") > -1;
+    
+    if (hostname) {
+        document.getElementById("nav-root-mobile").style.display = "none";
+        document.getElementById("nav-root-desktop").style.display = "none";
+        document.getElementById("nav-projects-mobile").style.display = "block";
+        document.getElementById("nav-projects-desktop").style.display = "flex";
+    } else {
+        document.getElementById("nav-root-mobile").style.display = "block";
+        document.getElementById("nav-root-desktop").style.display = "flex";
+        document.getElementById("nav-projects-mobile").style.display = "none";
+        document.getElementById("nav-projects-desktop").style.display = "none";
+    }
+}
+
 function NavLinks({
     link,
     title,
@@ -13,6 +29,20 @@ function NavLinks({
     return (
         <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
             <Link to={link} spy={true} smooth={true} offset={-100} duration={500}>{title}</Link>
+        </li>
+    );
+}
+
+function NavLinksHardCoded({
+    link,
+    title,
+}: {
+    link: string;
+    title: string;
+}) {
+    return (
+        <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
+            <a href={`http://localhost:3000#${link}`}>{title}</a>
         </li>
     );
 }
@@ -33,55 +63,97 @@ const Navbar = () => {
     }
 
     /* used for changing burger classes */
-    const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
-    const [menuClass, setMenuClass] = useState("menu hidden");
-    const [isMenuClicked, setIsMenuClicked] = useState(false);
+    const [burgerClassRoot, setBurgerClassRoot] = useState("burger-bar unclicked");
+    const [menuClassRoot, setMenuClassRoot] = useState("menu hidden");
+    const [isMenuClickedRoot, setisMenuClickedRoot] = useState(false);
+
+    const [burgerClassProjects, setBurgerClassProjects] = useState("burger-bar unclicked");
+    const [menuClassProjects, setMenuClassProjects] = useState("menu hidden");
+    const [isMenuClickedProjects, setisMenuClickedProjects] = useState(false);
 
     /* used for toggling burger menu changes */
-    const updateMenu = () => {
-        if (!isMenuClicked) {
-            setBurgerClass("burger-bar clicked");
-            setMenuClass("menu visible");
+    const updateMenuRoot = () => {
+        if (!isMenuClickedRoot) {
+            setBurgerClassRoot("burger-bar clicked");
+            setMenuClassRoot("menu visible");
         } else {
-            setBurgerClass("burger-bar unclicked");
-            setMenuClass("menu hidden");
+            setBurgerClassRoot("burger-bar unclicked");
+            setMenuClassRoot("menu hidden");
         }
 
-        setIsMenuClicked(!isMenuClicked);
+        setisMenuClickedRoot(!isMenuClickedRoot);
+    }
+
+    const updateMenuProjects = () => {
+        if (!isMenuClickedProjects) {
+            setBurgerClassProjects("burger-bar clicked");
+            setMenuClassProjects("menu visible");
+        } else {
+            setBurgerClassProjects("burger-bar unclicked");
+            setMenuClassProjects("menu hidden");
+        }
+
+        setisMenuClickedProjects(!isMenuClickedProjects);
     }
 
     return (
-        <div id="navbar" className={color ? "navbar-container text-white font-semibold 2xl:text-xl sticky top-0 z-50" : "text-white font-semibold 2xl:text-xl sticky top-0 z-50"}>
+        <div id="navbar" className={color ? "navbar-container text-white font-semibold 2xl:text-xl fixed top-0 z-50" : "text-white font-semibold 2xl:text-xl fixed top-0 z-50"}>
             <nav className="contents justify-between">
-                <div className="mobile-nav w-full h-auto">
+                <div id="nav-root-mobile" className="mobile-nav w-full h-auto">
                     <nav className="w-full h-20 bg-black flex justify-between items-center p-4 xs:pl-6">
                         <div className="flex items-center">
                             <h1 className="text-xl xs:text-2xl"><Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl">Mitchell Gruner</Link></h1>
                             <SiCodeberg className="icon ml-2 text-xl xs:text-2xl" />
                         </div>
-                        <div className="burger-menu" onClick={updateMenu}>
-                            <div className={burgerClass}></div>
-                            <div className={burgerClass}></div>
-                            <div className={burgerClass}></div>
+                        <div className="burger-menu" onClick={updateMenuRoot}>
+                            <div className={burgerClassRoot}></div>
+                            <div className={burgerClassRoot}></div>
+                            <div className={burgerClassRoot}></div>
                         </div>
                     </nav>
 
-                    <div className={menuClass}>
-                        <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenu}>About</Link>
-                        <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenu}>Projects</Link>
-                        <Link to="contact" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenu}>Contact</Link>
-                    </div>
+                    <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenuRoot}>About</Link>
+                    <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenuRoot}>Projects</Link>
+                    <Link to="contact" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenuRoot}>Contact</Link>
+                </div>
+                <div id="nav-projects-mobile" className="mobile-nav w-full h-auto">
+                    <nav className="w-full h-20 bg-black flex justify-between items-center p-4 xs:pl-6">
+                        <div className="flex items-center">
+                            <h1 className="text-xl xs:text-2xl"><Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl">Mitchell Gruner</Link></h1>
+                            <SiCodeberg className="icon ml-2 text-xl xs:text-2xl" />
+                        </div>
+                        <div className="burger-menu" onClick={updateMenuProjects}>
+                            <div className={burgerClassProjects}></div>
+                            <div className={burgerClassProjects}></div>
+                            <div className={burgerClassProjects}></div>
+                        </div>
+                    </nav>
+
+                    <a href="#about" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>About</a>
+                    <a href="#projects" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>Projects</a>
+                    <a href="#contact" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>Contact</a>
                 </div>
                 <div className="2xl:max-w-screen-2xl m-auto desktop-nav">
-                    <nav className="h-20 flex justify-between p-6 md:px-8 lg:px-10 xl:px-16 2xl:px-14">
+                    <nav id="nav-root-desktop" className="h-20 flex justify-between p-6 md:px-8 lg:px-10 xl:px-16 2xl:px-14">
                         <div className="flex items-center">
-                            <h1 className="mr-2 md:mr-4"><Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl" onClick={updateMenu}>Mitchell Gruner</Link></h1>
+                            <h1 className="mr-2 md:mr-4"><Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl" onClick={updateMenuRoot}>Mitchell Gruner</Link></h1>
                             <SiCodeberg className="icon text-xl md:text-2xl 2xl:text-3xl" />
                         </div>
                         <ul className="flex items-center">
                             <NavLinks link="about" title="About" />
                             <NavLinks link="projects" title="Projects" />
                             <NavLinks link="contact" title="Contact" />
+                        </ul>
+                    </nav>
+                    <nav id="nav-projects-desktop" className="h-20 flex justify-between p-6 md:px-8 lg:px-10 xl:px-16 2xl:px-14">
+                        <div className="flex items-center">
+                            <h1 className="mr-2 md:mr-4"><a href="http://localhost:3000" className="block text-xl md:text-2xl 2xl:text-3xl" onClick={updateMenuProjects}>Mitchell Gruner</a></h1>
+                            <SiCodeberg className="icon text-xl md:text-2xl 2xl:text-3xl" />
+                        </div>
+                        <ul className="flex items-center">
+                            <NavLinksHardCoded link="about" title="About" />
+                            <NavLinksHardCoded link="projects" title="Projects" />
+                            <NavLinksHardCoded link="contact" title="Contact" />
                         </ul>
                     </nav>
                 </div>
