@@ -7,19 +7,15 @@ if (typeof window !== 'undefined' && typeof document !== "undefined") {
     const hostname = window.location.href.indexOf("/projects") > -1;
     
     if (hostname) {
-        document.getElementById("nav-root-mobile").style.display = "none";
-        document.getElementById("nav-root-desktop").style.display = "none";
-        document.getElementById("nav-projects-mobile").style.display = "block";
-        document.getElementById("nav-projects-desktop").style.display = "flex";
+        document.getElementById("nav-projects").style.display = "block";
+        document.getElementById("nav-root").style.display = "none";
     } else {
-        document.getElementById("nav-root-mobile").style.display = "block";
-        document.getElementById("nav-root-desktop").style.display = "flex";
-        document.getElementById("nav-projects-mobile").style.display = "none";
-        document.getElementById("nav-projects-desktop").style.display = "none";
+        document.getElementById("nav-projects").style.display = "none";
+        document.getElementById("nav-root").style.display = "block";
     }
 }
 
-function NavLinks({
+function NavLinksRoot({
     link,
     title,
 }: {
@@ -33,7 +29,7 @@ function NavLinks({
     );
 }
 
-function NavLinksHardCoded({
+function NavLinksProjects({
     link,
     title,
 }: {
@@ -98,8 +94,10 @@ const Navbar = () => {
 
     return (
         <div id="navbar" className={color ? "navbar-container text-white font-semibold 2xl:text-xl fixed top-0 z-50" : "text-white font-semibold 2xl:text-xl fixed top-0 z-50"}>
-            <nav className="contents justify-between">
-                <div id="nav-root-mobile" className="mobile-nav w-full h-auto">
+
+            {/* navbar for when user is on root page*/}
+            <nav id="nav-root" className="contents justify-between">
+                <div className="mobile-nav w-full h-auto">
                     <nav className="w-full h-20 bg-black flex justify-between items-center p-4 xs:pl-6">
                         <div className="flex items-center">
                             <h1 className="text-xl xs:text-2xl"><Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl">Mitchell Gruner</Link></h1>
@@ -112,14 +110,33 @@ const Navbar = () => {
                         </div>
                     </nav>
 
-                    <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenuRoot}>About</Link>
-                    <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenuRoot}>Projects</Link>
-                    <Link to="contact" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenuRoot}>Contact</Link>
+                    <div className={menuClassRoot}>
+                        <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenuRoot}>About</Link>
+                        <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenuRoot}>Projects</Link>
+                        <Link to="contact" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenuRoot}>Contact</Link>
+                    </div>
                 </div>
-                <div id="nav-projects-mobile" className="mobile-nav w-full h-auto">
+                <div className="2xl:max-w-screen-2xl m-auto desktop-nav">
+                    <nav className="h-20 flex justify-between p-6 md:px-8 lg:px-10 xl:px-16 2xl:px-14">
+                        <div className="flex items-center">
+                            <h1 className="mr-2 md:mr-4"><Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl" onClick={updateMenuRoot}>Mitchell Gruner</Link></h1>
+                            <SiCodeberg className="icon text-xl md:text-2xl 2xl:text-3xl" />
+                        </div>
+                        <ul className="flex items-center">
+                            <NavLinksRoot link="about" title="About" />
+                            <NavLinksRoot link="projects" title="Projects" />
+                            <NavLinksRoot link="contact" title="Contact" />
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+
+            {/* navbar for when user is on /projects/* pages */}
+            <nav id="nav-projects" className="contents justify-between">
+                <div className="mobile-nav w-full h-auto">
                     <nav className="w-full h-20 bg-black flex justify-between items-center p-4 xs:pl-6">
                         <div className="flex items-center">
-                            <h1 className="text-xl xs:text-2xl"><Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl">Mitchell Gruner</Link></h1>
+                            <h1 className="text-xl xs:text-2xl"><a href="http://localhost:3000" className="block text-xl md:text-2xl 2xl:text-3xl">Mitchell Gruner</a></h1>
                             <SiCodeberg className="icon ml-2 text-xl xs:text-2xl" />
                         </div>
                         <div className="burger-menu" onClick={updateMenuProjects}>
@@ -129,31 +146,22 @@ const Navbar = () => {
                         </div>
                     </nav>
 
-                    <a href="#about" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>About</a>
-                    <a href="#projects" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>Projects</a>
-                    <a href="#contact" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>Contact</a>
+                    <div className={menuClassProjects}>
+                        <a href="http://localhost:3000#about" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>About</a>
+                        <a href="http://localhost:3000#projects" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>Projects</a>
+                        <a href="http://localhost:3000#projects" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>Contact</a>
+                    </div>
                 </div>
                 <div className="2xl:max-w-screen-2xl m-auto desktop-nav">
-                    <nav id="nav-root-desktop" className="h-20 flex justify-between p-6 md:px-8 lg:px-10 xl:px-16 2xl:px-14">
-                        <div className="flex items-center">
-                            <h1 className="mr-2 md:mr-4"><Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl" onClick={updateMenuRoot}>Mitchell Gruner</Link></h1>
-                            <SiCodeberg className="icon text-xl md:text-2xl 2xl:text-3xl" />
-                        </div>
-                        <ul className="flex items-center">
-                            <NavLinks link="about" title="About" />
-                            <NavLinks link="projects" title="Projects" />
-                            <NavLinks link="contact" title="Contact" />
-                        </ul>
-                    </nav>
-                    <nav id="nav-projects-desktop" className="h-20 flex justify-between p-6 md:px-8 lg:px-10 xl:px-16 2xl:px-14">
+                    <nav className="h-20 flex justify-between p-6 md:px-8 lg:px-10 xl:px-16 2xl:px-14">
                         <div className="flex items-center">
                             <h1 className="mr-2 md:mr-4"><a href="http://localhost:3000" className="block text-xl md:text-2xl 2xl:text-3xl" onClick={updateMenuProjects}>Mitchell Gruner</a></h1>
                             <SiCodeberg className="icon text-xl md:text-2xl 2xl:text-3xl" />
                         </div>
                         <ul className="flex items-center">
-                            <NavLinksHardCoded link="about" title="About" />
-                            <NavLinksHardCoded link="projects" title="Projects" />
-                            <NavLinksHardCoded link="contact" title="Contact" />
+                            <NavLinksProjects link="about" title="About" />
+                            <NavLinksProjects link="projects" title="Projects" />
+                            <NavLinksProjects link="contact" title="Contact" />
                         </ul>
                     </nav>
                 </div>
