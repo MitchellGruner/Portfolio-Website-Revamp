@@ -52,7 +52,7 @@ function NavLinks({
             <div id="projects-img" className="projects-card-container p-4 xs:p-5 md:p-6 xs:mx-6 xs:mt-10 sm:mx-10 md:mx-14 lg:mx-8 md:my-12">
                 <img
                 id="projects-img"
-                    className="mx-auto w-48 md:w-72"
+                    className="mx-auto w-48 md:w-56 lg:w-64"
                     src={`/static/images/${image}`}
                     alt={alt}
                 />
