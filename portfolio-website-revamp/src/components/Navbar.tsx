@@ -33,7 +33,7 @@ function NavLinksProjects({
     link,
     title,
 }: {
-    link: string;
+    link?: string;
     title: string;
 }) {
     return (
@@ -148,8 +148,8 @@ const Navbar = () => {
 
                     <div className={menuClassProjects}>
                         <a href="http://localhost:3000#about" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>About</a>
-                        <a href="http://localhost:3000#projects" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>Projects</a>
-                        <a href="http://localhost:3000#projects" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>Contact</a>
+                        <a href="http://localhost:3000#projects-section" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>Projects</a>
+                        <a href="http://localhost:3000#contact-section" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>Contact</a>
                     </div>
                 </div>
                 <div className="2xl:max-w-screen-2xl m-auto desktop-nav">
@@ -159,9 +159,9 @@ const Navbar = () => {
                             <SiCodeberg className="icon text-xl md:text-2xl 2xl:text-3xl" />
                         </div>
                         <ul className="flex items-center">
-                            <NavLinksProjects link="about" title="About" />
-                            <NavLinksProjects link="projects" title="Projects" />
-                            <NavLinksProjects link="contact" title="Contact" />
+                            <NavLinksProjects link="" title="About" />
+                            <NavLinksProjects link="projects-section" title="Projects" />
+                            <NavLinksProjects link="contact-section" title="Contact" />
                         </ul>
                     </nav>
                 </div>
