@@ -1,38 +1,57 @@
 #projects {
-    .projects-card-container {
-        .projects-card {
-            background: rgba( 255, 255, 255, 0.2 );
-            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-            backdrop-filter: blur( 12px );
-            -webkit-backdrop-filter: blur( 12px );
-            border-radius: 10px;
-    
-            a {
-                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-            }
-        }
-
-        .projects-card,
-        .projects-card:hover {
-            transition: 0.5s ease-in-out;
-        }
-
-        .projects-card:hover {
-            background: rgba( 255, 255, 255, 0.4 );
+    @media (max-width: 300px) {
+        #projects-section {
+            padding-top: 450px;
+            margin-top: -450px;
         }
     }
 
-    @media (min-width: 992px) {
-        .projects-card-container:nth-child(odd) {
-            flex-flow: row-reverse;
-    
-            .projects-card {
-                margin-right: 1.2em;
-            }
+    @media (min-width: 301px) {
+        #projects-section {
+            padding-top: 400px;
+            margin-top: -400px;
         }
-    
-        .projects-card-container:nth-child(even) img {
-            margin-right: 1.2em;
+    }
+
+    @media (min-width: 350px) {
+        #projects-section {
+            padding-top: 350px;
+            margin-top: -350px;
+        }
+    }
+
+    @media (min-width: 420px) {
+        #projects-section {
+            padding-top: 420px;
+            margin-top: -420px;
+        }
+    }
+
+    @media (min-width: 500px) {
+        #projects-section {
+            padding-top: 370px;
+            margin-top: -370px;
+        }
+    }
+
+    @media (min-width: 576px) {
+        #projects-section {
+            padding-top: 450px;
+            margin-top: -450px;
+        }
+    }
+
+    @media (min-width: 720px) {
+        #projects-section {
+            padding-top: 350px;
+            margin-top: -350px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        #projects-section {
+            padding-top: 400px;
+            margin-top: -400px;
         }
     }
 
