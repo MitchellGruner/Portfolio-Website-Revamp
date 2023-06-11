@@ -5,6 +5,7 @@ import '../styles/globals.scss';
 import '../styles/Navbar.scss';
 import '../styles/Projects.scss';
 import '../styles/ProjectsInfo.scss';
+import '../styles/Contact.scss';
 
 export default function App({ Component, pageProps }) {
   return (
