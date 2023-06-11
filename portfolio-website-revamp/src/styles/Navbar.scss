@@ -6,6 +6,10 @@
         display: none;
     }
 
+    .icon {
+        color: #ffcb6b !important;
+    }
+
     .mobile-nav {
         .burger-menu {
             height: 100%;
@@ -40,7 +44,7 @@
         }
 
         .icon {
-            color: #976BFF;
+            color: #976BFF !important;
         }
     
         /* sliding menu */
@@ -111,7 +115,7 @@
 
     .desktop-nav {
         .icon {
-            color: #976BFF;
+            color: #976BFF !important;
             transition: 0.5s ease-in-out;
         }
 
