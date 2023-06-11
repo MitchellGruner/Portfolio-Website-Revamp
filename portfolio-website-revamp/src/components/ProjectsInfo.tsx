@@ -64,7 +64,7 @@ function NavLinks({
                 </div>
                 <div id="projects-card" className="projects-card px-3 2xl:px-7 xs:px-4 py-4 2xl:py-6 xs:py-5 my-4 xs:my-5">
                     <div className="flex items-center mb-4 xs:mb-5">
-                        <p className="text-white block mr-4 xs:mr-5 text-2xl sm:text-3xl 2xl:text-4xl"><span className="text-black font-bold mr-1">{titleFirst}</span>{titleSecond}</p>
+                        <p className="text-white block mr-4 xs:mr-5 text-2xl sm:text-3xl 2xl:text-4xl"><span className="text-gold font-bold mr-1">{titleFirst}</span>{titleSecond}</p>
                         <span className="text-white text-xl sm:text-2xl">{iconArray[id]}</span>
                     </div>
                     <p className="text-white block m-1 xs:m-2 text-md sm:text-lg 2xl:text-xl">{description}</p>
