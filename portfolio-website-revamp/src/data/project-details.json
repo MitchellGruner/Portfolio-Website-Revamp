@@ -1,6 +1,7 @@
 [
     {
       "id": 0,
+      "url": "quiz-list",
       "image": "quizlist1.png",
       "alt": "Quiz List Logo",
       "titleFirst": "Quiz",
@@ -12,6 +13,7 @@
     },
     {
         "id": 1,
+        "url": "cloud-vend",
         "image": "cloudvend1.png",
         "alt": "Cloud Vend Logo",
         "titleFirst": "Cloud",
@@ -22,6 +24,7 @@
       },
       {
         "id": 2,
+        "url": "mobile-learning-app",
         "image": "mobile-learning-app.png",
         "alt": "Mobile Learning App Logo",
         "titleFirst": "Mobile Learning",
@@ -33,6 +36,7 @@
       },
       {
         "id": 3,
+        "url": "the-path",
         "image": "thepath.png",
         "alt": "The Path Logo",
         "titleFirst": "The",
@@ -43,6 +47,7 @@
       },
       {
         "id": 4,
+        "url": "hangman",
         "image": "hangman.png",
         "alt": "Hangman Logo",
         "titleFirst": "Hangman",
@@ -54,6 +59,7 @@
       },
       {
         "id": 5,
+        "url": "baseball-aggressive-analytics",
         "image": "baseball-aggressive-analytics.png",
         "alt": "Baseball Aggressive Analytics Logo",
         "titleFirst": "Baseball",
