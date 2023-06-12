@@ -1,32 +1,201 @@
 #contact {
-    #contact-section {
-        padding-top: 100px;
-        margin-top: -100px;
+    @media (max-width: 300px) {
+        #contact-section {
+            padding-top: 520px;
+            margin-top: -520px;
+        }
+    }
+
+    @media (min-width: 301px) {
+        #contact-section {
+            padding-top: 480px;
+            margin-top: -480px;
+        }
+    }
+
+    @media (min-width: 327px) {
+        #contact-section {
+            padding-top: 450px;
+            margin-top: -450px;
+        }
+    }
+
+    @media (min-width: 344px) {
+        #contact-section {
+            padding-top: 420px;
+            margin-top: -420px;
+        }
+    }
+
+    @media (min-width: 370px) {
+        #contact-section {
+            padding-top: 390px;
+            margin-top: -390px;
+        }
+    }
+
+    @media (min-width: 393px) {
+        #contact-section {
+            padding-top: 360px;
+            margin-top: -360px;
+        }
+    }
+
+    @media (min-width: 400px) {
+        #contact-section {
+            padding-top: 470px;
+            margin-top: -470px;
+        }
+    }
+
+    @media (min-width: 400px) {
+        #contact-section {
+            padding-top: 410px;
+            margin-top: -410px;
+        }
+    }
+
+    @media (min-width: 468px) {
+        #contact-section {
+            padding-top: 380px;
+            margin-top: -380px;
+        }
+    }
+
+    @media (min-width: 515px) {
+        #contact-section {
+            padding-top: 360px;
+            margin-top: -360px;
+        }
+    }
+
+    @media (min-width: 833px) {
+        #contact-section {
+            padding-top: 325px;
+            margin-top: -325px;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        #contact-section {
+            padding-top: 400px;
+            margin-top: -400px;
+        }
     }
 
     .chakra-text {
         color: #FF1F86;
     }
 
-    a,
-    a:hover {
+    .chakra-ui-dark .css-1tfjd1n:not([data-theme]),
+    [data-theme=dark] .css-1tfjd1n:not([data-theme]) {
+        --form-control-color: #FF1F86;
+    }
+
+    .css-qa35yj[aria-invalid=true] {
+        border-color: #FF1F86;
+    }
+
+    .contact-form-submit,
+    .contact-form-submit:hover,
+    .contact-information-div a,
+    .contact-information-div a:hover {
         transition: 0.5s ease-in-out;
     }
 
-    a {
+    .contact-form-submit {
         margin: auto;
-        border: 1px solid #976BFF;
+        border: 1px solid #ffcb6b;
         cursor: pointer;
     }
 
-    a:hover {
+    .contact-form-submit:hover {
         background-color: transparent;
         border: 1px solid #fff;
+        color: #fff;
     }
 
-    @media (max-width: 399px) {
-        p {
+    .contact-information-div {
+        background: rgba( 255, 255, 255, 0.2 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 12px );
+        -webkit-backdrop-filter: blur( 12px );
+        border-radius: 10px;
+
+        a:hover {
+            color: #ffcb6b;
+        }
+
+        span svg {
+            margin-bottom: 0.15em;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .contact-information-div {
+            padding: 0.66em;
+        }
+
+        .text-center p {
             font-size: 0.73em !important;
+        }
+
+        .contact-information-div a {
+            font-size: 0.66em !important;
+        }
+    }
+
+    @media (min-width: 400px) {
+        .contact-information-div {
+            padding: 0.73em;
+        }
+
+        .text-center p {
+            font-size: 0.81em !important;
+        }
+
+        .contact-information-div a {
+            font-size: 0.73em !important;
+        }
+    }
+
+    @media (min-width: 576px) {
+        .contact-information-div {
+            padding: 0.81em;
+        }
+
+        .text-center p {
+            font-size: 0.9em !important;
+        }
+
+        .contact-information-div a {
+            font-size: 0.81em !important;
+        }
+
+        .contact-information-div p {
+            font-size: 0.73em !important;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .contact-information-image {
+            width: 40em;
+            margin: auto;
+            padding-right: 2em;
+        }
+
+        .contact-information-div {
+            margin: auto;
+        }
+
+        .contact-form {
+            margin-top: 3em;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .contact-information-image {
+            width: 47em;
         }
     }
 }
