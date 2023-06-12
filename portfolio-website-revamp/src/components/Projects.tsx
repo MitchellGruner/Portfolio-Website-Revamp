@@ -2,16 +2,18 @@ import React from "react";
 
 function ProjectLogo({
     id,
+    url,
     logo,
     alt,
 }: {
     id: number;
+    url: string;
     logo: string;
     alt: string;
 }) {
     return (
         <div className="project-logo-container mx-auto mb-6 xs:mb-8 md:mb-8 lg:mb-10">
-            <a href={`/projects/${id}`} className="flex mx-12 xs:mx-4 sm:mx-10 md:mx-6 lg:mx-4">
+            <a key={id} href={`/projects/${url}`} className="flex mx-12 xs:mx-4 sm:mx-10 md:mx-6 lg:mx-4">
                 <img
                     className="mx-auto"
                     src={`/static/images/${logo}`}
@@ -37,6 +39,7 @@ const Projects = (props) => {
                         <ProjectLogo
                             key={project.id}
                             id={project.id}
+                            url={project.url}
                             logo={project.image}
                             alt={project.alt}
                         />
