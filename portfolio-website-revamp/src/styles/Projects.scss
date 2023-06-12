@@ -20,7 +20,7 @@
         }
     }
 
-    @media (min-width: 420px) {
+    @media (min-width: 400px) {
         #projects-section {
             padding-top: 420px;
             margin-top: -420px;
@@ -29,8 +29,8 @@
 
     @media (min-width: 500px) {
         #projects-section {
-            padding-top: 370px;
-            margin-top: -370px;
+            padding-top: 340px;
+            margin-top: -340px;
         }
     }
 
@@ -41,10 +41,17 @@
         }
     }
 
+    @media (min-width: 642px) {
+        #projects-section {
+            padding-top: 400px;
+            margin-top: -400px;
+        }
+    }
+
     @media (min-width: 720px) {
         #projects-section {
-            padding-top: 350px;
-            margin-top: -350px;
+            padding-top: 330px;
+            margin-top: -330px;
         }
     }
 
@@ -52,6 +59,34 @@
         #projects-section {
             padding-top: 400px;
             margin-top: -400px;
+        }
+    }
+
+    @media (min-width: 834px) {
+        #projects-section {
+            padding-top: 380px;
+            margin-top: -380px;
+        }
+    }
+
+    @media (min-width: 933px) {
+        #projects-section {
+            padding-top: 320px;
+            margin-top: -320px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        #projects-section {
+            padding-top: 360px;
+            margin-top: -360px;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        #projects-section {
+            padding-top: 460px;
+            margin-top: -460px;
         }
     }
 

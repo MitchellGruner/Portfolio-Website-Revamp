@@ -1,3 +1,6 @@
+import {ChakraProvider} from "@chakra-ui/react";
+import AppContainer from "../components/AppContainer";
+
 import Head from "next/head";
 import About from "../components/About";
 import Projects from "../components/Projects";
@@ -24,7 +27,11 @@ const Home = (props) => {
       <div className="2xl:max-w-screen-2xl m-auto pt-24">
         <About />
         <Projects productDetails={props} />
-        <Contact />
+        <ChakraProvider>
+          <AppContainer>
+            <Contact />
+          </AppContainer>
+        </ChakraProvider>
       </div>
     </div>
   )

@@ -24,9 +24,9 @@ function ProjectLogo({
 
 const Projects = (props) => {
     return (
-        <div id="projects" className="h-auto mt-2 mb-16 xs:mb-20 sm:mb-24 md:mb-32 md:mt-2 lg:mb-36 xl:mb-40 2xl:mb-44">
+        <div id="projects" className="h-auto mt-2 mb-12 xs:mb-16 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-36">
             <div className="text-center mx-4 sm:mx-32 md:mx-42 lg:mx-56 xl:mx-80">
-                <h2 className="text-3xl xs:text-4xl md:text-5xl 2xl:text-6xl font-bold text-white">Here are some <span className="text-black font-extrabold">highlights</span>...</h2>
+                <h2 className="text-3xl xs:text-4xl md:text-5xl 2xl:text-6xl font-bold text-white">Here are some <span className="text-gold font-extrabold">highlights</span>...</h2>
                 <p className="text-md p-4 mb-6 xs:mb-10 2xl:mt-6 2xl:mb-14 xs:text-lg md:text-xl 2xl:text-2xl text-white">From shopping in an ecommerce full-stack application, to analyzing trends with statistical analysis in sports, to playing trivia with a wide range of interesting and fun questions, these projects offer a lit bit of everything.</p>
             </div>
             <div id="projects-section"></div>
