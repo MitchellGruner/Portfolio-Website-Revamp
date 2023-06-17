@@ -3,7 +3,7 @@ import {BsLinkedin} from "react-icons/bs";
 import {AiFillGithub} from "react-icons/ai";
 import {BsInstagram} from "react-icons/bs";
 import Image from "next/image";
-import AboutImage from "../../public/static/images/about-profile.png";
+import AboutImage from "../../public/static/images/profilewithflower.png";
 
 const About = () => {
     return (
