@@ -11,7 +11,7 @@ import {useState} from "react";
 import {sendContactForm} from "../lib/api";
 
 import Image from "next/image";
-import ContactImage from "../../public/static/images/contact-image.png";
+import ContactImage from "../../public/static/images/profilelookingdown.png";
 
 import {BsPhone} from "react-icons/bs";
 import {AiOutlineMail} from "react-icons/ai";
@@ -87,7 +87,7 @@ const Contact = () => {
       <div id="contact-section"></div>
 
       <div className="flex flex-col md:flex-row">
-        <div className="contact-information-image mt-6 w-2/3 xs:w-7/12 sm:w-2/5 m-auto">
+        <div className="contact-information-image mt-6 w-2/3 xs:w-7/12 sm:w-2/5 xl:w-96 m-auto">
             <Image src={ContactImage} className="rounded-full" alt="" />
         </div>
         <div className="contact-information-div mt-6 sm:mt-8 mb-12 sm:mb-14 xs:mx-4 sm:mx-10 md:mx-0">
