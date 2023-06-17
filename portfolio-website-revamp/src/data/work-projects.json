@@ -1,0 +1,21 @@
+[
+    {
+        "id": 0,
+        "url": "https://www.electronicexpress.com/brands/tempur-pedic/adapt-series",
+        "image": "tempur-pedic-logo.png",
+        "alt": "Tempur Pedic Logo"
+    },
+    {
+        "id": 1,
+        "url": "https://www.electronicexpress.com/brands/zwilling",
+        "image": "zwilling-logo.png",
+        "alt": "Zwilling Logo"
+    },
+    {
+        "id": 2,
+        "url": "https://www.electronicexpress.com/luxury",
+        "image": "luxury-logo.png",
+        "alt": "Luxury Logo"
+    }
+]
+  
