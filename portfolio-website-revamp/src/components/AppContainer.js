@@ -7,4 +7,5 @@ const AppContainer = ({children}) => {
     </Container>
   );
 };
+
 export default AppContainer;
