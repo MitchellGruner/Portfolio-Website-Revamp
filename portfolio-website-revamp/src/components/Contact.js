@@ -26,7 +26,6 @@ const initValues = {
 };
 
 const initState = {
-  isLoading: false,
   error: "",
   values: initValues
 };
@@ -38,7 +37,6 @@ const Contact = () => {
 
   const {
     values,
-    isLoading,
     error
   } = state;
 
@@ -57,7 +55,6 @@ const Contact = () => {
   const onSubmit = async () => {
     setState((prev) => ({
       ...prev,
-      isLoading: true,
     }));
     try {
       await sendContactForm(values);
@@ -72,7 +69,6 @@ const Contact = () => {
     } catch (error) {
       setState((prev) => ({
         ...prev,
-        isLoading: false,
         error: error.message,
       }));
     }
@@ -195,8 +191,7 @@ const Contact = () => {
         <a
           className="contact-form-submit flex justify-center items-center text-white font-bold bg-black rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md 2xl:text-lg"
           variant="outline"
-          colorScheme="blue"
-          isLoading={isLoading}
+          colorscheme="blue"
           disabled={
             !values.subject || !values.name || !values.email || !values.organization || !values.message
           }
