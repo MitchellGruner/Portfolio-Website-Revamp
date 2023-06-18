@@ -13,7 +13,7 @@ function ProjectDisplay({
 }) {
     return (
         <div className="project-logo-container mx-auto mb-6 xs:mb-8 md:mb-8 lg:mb-10">
-            <a key={id} href={url} className="flex mx-12 xs:mx-4 sm:mx-10 md:mx-6 lg:mx-4">
+            <a href={url} className="flex mx-12 xs:mx-4 sm:mx-10 md:mx-6 lg:mx-4">
                 <img
                     className="mx-auto"
                     src={`/static/images/${logo}`}
@@ -36,6 +36,7 @@ const WorkProjects = (props) => {
                 {props.workProjects.workProjects.map((project) => {
                     return (
                         <ProjectDisplay
+                            key={project.id}
                             id={project.id}
                             url={project.url}
                             logo={project.image}
