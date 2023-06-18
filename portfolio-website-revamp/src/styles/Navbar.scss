@@ -24,7 +24,7 @@
         .burger-bar {
             width: 4em;
             height: 0.5em;
-            background-color: #976BFF;
+            background-color: #484B86;
             border-radius: 0.5em;
         }
     
@@ -44,7 +44,7 @@
         }
 
         .icon {
-            color: #976BFF !important;
+            color: #484B86 !important;
         }
     
         /* sliding menu */
@@ -115,12 +115,12 @@
 
     .desktop-nav {
         .icon {
-            color: #976BFF !important;
+            color: #484B86 !important;
             transition: 0.5s ease-in-out;
         }
 
         a:hover {
-            color: #976BFF;
+            color: #484B86;
         }
     }
 }
