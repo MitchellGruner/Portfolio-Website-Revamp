@@ -23,7 +23,7 @@ const Home = (props) => {
   return (
     <div className="m-auto">
       <Head>
-        <title>Mitchell Gruner Portfolio</title>
+        <title>Mitchell Gruner</title>
         <meta name="description" content="Personal portfolio site of Mitchell Gruner. Professional Front End Developer currently employed at Electronic Express in Nashville, TN. Created using Next.js, React.js, TypeScript, Tailwind CSS, Sass, JavaScript, and HTML and CSS" />
       </Head>
 
