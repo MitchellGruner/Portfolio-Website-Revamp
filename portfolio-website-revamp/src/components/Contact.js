@@ -26,7 +26,6 @@ const initValues = {
 };
 
 const initState = {
-  isLoading: false,
   error: "",
   values: initValues
 };
@@ -38,7 +37,6 @@ const Contact = () => {
 
   const {
     values,
-    isLoading,
     error
   } = state;
 
@@ -57,7 +55,6 @@ const Contact = () => {
   const onSubmit = async () => {
     setState((prev) => ({
       ...prev,
-      isLoading: true,
     }));
     try {
       await sendContactForm(values);
@@ -72,7 +69,6 @@ const Contact = () => {
     } catch (error) {
       setState((prev) => ({
         ...prev,
-        isLoading: false,
         error: error.message,
       }));
     }
@@ -88,7 +84,7 @@ const Contact = () => {
 
       <div className="flex flex-col md:flex-row">
         <div className="contact-information-image mt-6 w-2/3 xs:w-7/12 sm:w-2/5 xl:w-96 m-auto">
-            <Image src={ContactImage} className="rounded-full" alt="" />
+            <Image src={ContactImage} className="profile-picture rounded-full" alt="Contact Picture of Myself" />
         </div>
         <div className="contact-information-div mt-6 sm:mt-8 mb-12 sm:mb-14 xs:mx-4 sm:mx-10 md:mx-0">
           <div className="flex my-1">
@@ -195,8 +191,7 @@ const Contact = () => {
         <a
           className="contact-form-submit flex justify-center items-center text-white font-bold bg-black rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md 2xl:text-lg"
           variant="outline"
-          colorScheme="blue"
-          isLoading={isLoading}
+          colorscheme="blue"
           disabled={
             !values.subject || !values.name || !values.email || !values.organization || !values.message
           }
