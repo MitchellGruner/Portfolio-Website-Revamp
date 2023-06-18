@@ -21,7 +21,7 @@ let iconArray = [
 function DemoDisplay (demo) {
     if (Object.values(demo).toString().length > 0) {
         return (
-            <a href={Object.values(demo).toString()} className="flex justify-center items-center text-white bg-red rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md 2xl:text-lg">Demo</a>
+            <a href={Object.values(demo).toString()} className="flex justify-center items-center bg-blue text-white bg-red rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md 2xl:text-lg">Demo</a>
         )
     }
 }
@@ -74,7 +74,7 @@ function NavLinks({
                     </div>
                 </div>
                 <div id="projects-back" className="projects-card-go-back-btn justify-end">
-                    <a href="/" className="right-0 flex justify-center items-center text-white bg-purple rounded-full w-28 xs:w-40 sm:w-52 xl:w-60 p-3 mt-4 md:right-0 md:absolute text-sm sm:text-md 2xl:text-lg">Go Back</a>
+                    <a href="/" className="right-0 flex justify-center items-center text-white bg-blue rounded-full w-28 xs:w-40 sm:w-52 xl:w-60 p-3 mt-4 md:right-0 md:absolute text-sm sm:text-md 2xl:text-lg">Go Back</a>
                 </div>
             </div>
         </div>
