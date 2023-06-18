@@ -88,7 +88,7 @@ const Contact = () => {
 
       <div className="flex flex-col md:flex-row">
         <div className="contact-information-image mt-6 w-2/3 xs:w-7/12 sm:w-2/5 xl:w-96 m-auto">
-            <Image src={ContactImage} className="rounded-full" alt="" />
+            <Image src={ContactImage} className="rounded-full" alt="Contact Picture of Myself" />
         </div>
         <div className="contact-information-div mt-6 sm:mt-8 mb-12 sm:mb-14 xs:mx-4 sm:mx-10 md:mx-0">
           <div className="flex my-1">

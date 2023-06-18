@@ -25,7 +25,7 @@ const About = () => {
                 </a>
             </div>
             <div className="mt-6 w-2/3 xs:w-7/12 sm:w-2/5 md:w-72 2xl:w-72 m-auto">
-                <Image src={AboutImage} className="rounded-full" alt="" />
+                <Image src={AboutImage} className="rounded-full" alt="About Picture of Myself" />
             </div>
         </div>
     );
