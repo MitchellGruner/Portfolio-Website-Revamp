@@ -1,13 +1,11 @@
 import React from "react";
 
 function ProjectDisplay({
-    key,
     id,
     url,
     logo,
     alt,
 }: {
-    key: number;
     id: number;
     url: string;
     logo: string;
@@ -38,7 +36,6 @@ const WorkProjects = (props) => {
                 {props.workProjects.workProjects.map((project) => {
                     return (
                         <ProjectDisplay
-                            key={project.id}
                             id={project.id}
                             url={project.url}
                             logo={project.image}
