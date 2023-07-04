@@ -77,8 +77,8 @@ const Contact = () => {
   return (
     <div id="contact" className="h-auto mt-2 mb-8">
       <div className="text-center">
-          <h2 className="text-3xl xs:text-4xl md:text-5xl 2xl:text-6xl font-bold text-white">Let's Get <span className="text-black font-extrabold">Connected</span>...</h2>
-          <p className="p-4 mb-6 xs:mb-10 2xl:mt-6 2xl:mb-14 xs:text-lg md:text-xl 2xl:text-2xl text-white">I am always looking for the next greatest opportunity to bring my web development and design skills to the next level. Whether you have a question or just want to say 'hi', my inbox is always open. Like what you see? Reach out to me today and let's do this!</p>
+          <h2 className="text-3xl xs:text-4xl md:text-5xl 2xl:text-6xl font-bold text-white">Let&apos;s Get <span className="text-black font-extrabold">Connected</span>...</h2>
+          <p className="p-4 mb-6 xs:mb-10 2xl:mt-6 2xl:mb-14 xs:text-lg md:text-xl 2xl:text-2xl text-white">I am always looking for the next greatest opportunity to bring my web development and design skills to the next level. Whether you have a question or just want to say &apos;hi&apos;, my inbox is always open. Like what you see? Reach out to me today and let&apos;s do this!</p>
       </div>
       <div id="contact-section"></div>
 
@@ -190,8 +190,6 @@ const Contact = () => {
   
         <a
           className="contact-form-submit flex justify-center items-center text-white font-bold bg-black rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md 2xl:text-lg"
-          variant="outline"
-          colorscheme="blue"
           disabled={
             !values.subject || !values.name || !values.email || !values.organization || !values.message
           }
