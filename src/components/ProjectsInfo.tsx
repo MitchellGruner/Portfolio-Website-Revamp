@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 import dynamic from 'next/dynamic';
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
@@ -9,14 +10,15 @@ import {AiOutlineMobile} from "react-icons/ai";
 import {GiStonePath} from "react-icons/gi";
 import {ImMan} from "react-icons/im";
 import {CiBaseball} from "react-icons/ci";
+import Link from 'next/link';
 
 let iconArray = [
-    <BsCardList />,
-    <AiOutlineCloud />,
-    <AiOutlineMobile />,
-    <GiStonePath />,
-    <ImMan />,
-    <CiBaseball />
+    <BsCardList key={0} />,
+    <AiOutlineCloud key={1} />,
+    <AiOutlineMobile key={2} />,
+    <GiStonePath key={3} />,
+    <ImMan key={4} />,
+    <CiBaseball key={5} />
 ]
 
 function DemoDisplay (demo) {
@@ -51,11 +53,13 @@ function NavLinks({
     return (
         <div id="projects-info" className="block">
             <div id="projects-img" className="projects-card-container p-4 xs:p-5 md:p-6 xs:mx-6 xs:mt-10 sm:mx-10 md:mx-14 lg:mx-8 md:my-12">
-                <img
-                id="projects-img"
+                <Image id="projects-img"
                     className="mx-auto w-48 md:w-56 lg:w-64"
                     src={`/static/images/${image}`}
                     alt={alt}
+                    width="200"
+                    height="0"
+                    style={{ width: 'auto', height: 'auto' }}
                 />
                 <div id="projects-card-video" className="projects-card-video-container">
                     <ReactPlayer 
@@ -75,7 +79,7 @@ function NavLinks({
                     </div>
                 </div>
                 <div id="projects-back" className="projects-card-go-back-btn justify-end">
-                    <a href="/" className="right-0 flex justify-center items-center text-white bg-blue rounded-full w-28 xs:w-40 sm:w-52 xl:w-60 p-3 mt-4 md:right-0 md:absolute text-sm sm:text-md 2xl:text-lg">Go Back</a>
+                    <Link href="/" className="right-0 flex justify-center items-center text-white bg-blue rounded-full w-28 xs:w-40 sm:w-52 xl:w-60 p-3 mt-4 md:right-0 md:absolute text-sm sm:text-md 2xl:text-lg">Go Back</Link>
                 </div>
             </div>
         </div>
