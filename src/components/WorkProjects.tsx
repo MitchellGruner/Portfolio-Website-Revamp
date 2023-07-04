@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function ProjectDisplay({
     id,
@@ -14,10 +15,13 @@ function ProjectDisplay({
     return (
         <div className="project-logo-container mx-auto mb-6 xs:mb-8 md:mb-8 lg:mb-10">
             <a href={url} className="flex mx-12 xs:mx-4 sm:mx-10 md:mx-6 lg:mx-4">
-                <img
+                <Image
                     className="mx-auto"
                     src={`/static/images/${logo}`}
                     alt={alt}
+                    width="200"
+                    height="0"
+                    style={{ width: '100%', height: 'auto' }}
                 />
             </a>
         </div>
