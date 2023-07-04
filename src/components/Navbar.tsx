@@ -38,7 +38,7 @@ function NavLinksProjects({
 }) {
     return (
         <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
-            <a href={`http://localhost:3000#${link}`}>{title}</a>
+            <a href={`https://mitchellgruner.com#${link}`}>{title}</a>
         </li>
     );
 }
@@ -136,7 +136,7 @@ const Navbar = () => {
                 <div className="mobile-nav w-full h-auto">
                     <nav className="w-full h-20 bg-black flex justify-between items-center p-4 xs:pl-6">
                         <div className="flex items-center">
-                            <h1 className="text-xl xs:text-2xl"><a href="http://localhost:3000" className="block text-xl md:text-2xl 2xl:text-3xl">Mitchell Gruner</a></h1>
+                            <h1 className="text-xl xs:text-2xl"><a href="https://mitchellgruner.com" className="block text-xl md:text-2xl 2xl:text-3xl">Mitchell Gruner</a></h1>
                             <SiCodeberg className="icon ml-2 text-xl xs:text-2xl" />
                         </div>
                         <div className="burger-menu" onClick={updateMenuProjects}>
@@ -147,15 +147,15 @@ const Navbar = () => {
                     </nav>
 
                     <div className={menuClassProjects}>
-                        <a href="http://localhost:3000#about" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>About</a>
-                        <a href="http://localhost:3000#projects-section" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>Projects</a>
-                        <a href="http://localhost:3000#contact-section" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>Contact</a>
+                        <a href="https://mitchellgruner.com#about" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>About</a>
+                        <a href="https://mitchellgruner.com#projects-section" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>Projects</a>
+                        <a href="https://mitchellgruner.com#contact-section" className="block text-xl xs:text-2xl" onClick={updateMenuProjects}>Contact</a>
                     </div>
                 </div>
                 <div className="2xl:max-w-screen-2xl m-auto desktop-nav">
                     <nav className="h-20 flex justify-between p-6 md:px-8 lg:px-10 xl:px-16 2xl:px-14">
                         <div className="flex items-center">
-                            <h1 className="mr-2 md:mr-4"><a href="http://localhost:3000" className="block text-xl md:text-2xl 2xl:text-3xl" onClick={updateMenuProjects}>Mitchell Gruner</a></h1>
+                            <h1 className="mr-2 md:mr-4"><a href="https://mitchellgruner.com" className="block text-xl md:text-2xl 2xl:text-3xl" onClick={updateMenuProjects}>Mitchell Gruner</a></h1>
                             <SiCodeberg className="icon text-xl md:text-2xl 2xl:text-3xl" />
                         </div>
                         <ul className="flex items-center">
