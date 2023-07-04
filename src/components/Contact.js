@@ -114,7 +114,7 @@ const Contact = () => {
           isRequired
           isInvalid={touched.subject && !values.subject}
         >
-          <FormLabel>Subject</FormLabel>
+          <FormLabel className="text-white">Subject</FormLabel>
           <Input
             type="text"
             name="subject"
@@ -128,7 +128,7 @@ const Contact = () => {
         </FormControl>
   
         <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
-          <FormLabel>Full Name</FormLabel>
+          <FormLabel className="text-white">Full Name</FormLabel>
           <Input
             type="text"
             name="name"
@@ -142,7 +142,7 @@ const Contact = () => {
         </FormControl>
   
         <FormControl isRequired isInvalid={touched.email && !values.email} mb={5}>
-          <FormLabel>Email</FormLabel>
+          <FormLabel className="text-white">Email</FormLabel>
           <Input
             type="email"
             name="email"
@@ -156,7 +156,7 @@ const Contact = () => {
         </FormControl>
 
         <FormControl isRequired isInvalid={touched.organization && !values.organization} mb={5}>
-          <FormLabel>Organization</FormLabel>
+          <FormLabel className="text-white">Organization</FormLabel>
           <Input
             type="text"
             name="organization"
@@ -174,7 +174,7 @@ const Contact = () => {
           isInvalid={touched.message && !values.message}
           mb={5}
         >
-          <FormLabel>Message</FormLabel>
+          <FormLabel className="text-white">Message</FormLabel>
           <Textarea
             type="text"
             name="message"
