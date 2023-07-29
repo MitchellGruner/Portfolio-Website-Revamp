@@ -7,15 +7,15 @@
     },
     {
         "id": 1,
-        "url": "https://www.electronicexpress.com/brands/monogram",
-        "image": "monogram-logo.png",
-        "alt": "Monogram Logo"
+        "url": "https://www.electronicexpress.com/catalog/190369/ge-gfw850spnrs-50-cuft-sapphire-blue-electric-smart-washer",
+        "image": "pdp-image.png",
+        "alt": "PDP Card Logo"
     },
     {
         "id": 2,
-        "url": "https://www.electronicexpress.com/luxury",
-        "image": "luxury-logo.png",
-        "alt": "Luxury Logo"
+        "url": "https://www.electronicexpress.com/brands/monogram",
+        "image": "monogram-logo.png",
+        "alt": "Monogram Logo"
     }
 ]
   
