@@ -53,24 +53,52 @@ const Contact = () => {
     }));
 
   const onSubmit = async () => {
+    var fullNameValue = document.getElementById("full-name-value").value;
+    var fullNameRegex = /^([\w]{2,})+\s+([\w\s]{2,})+$/i;
+    var fullNameResult = fullNameRegex.test(fullNameValue);
+  
+    var emailValue = document.getElementById("email-value").value;
+    var emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var emailResult = emailRegex.test(emailValue);
+
     setState((prev) => ({
       ...prev,
     }));
-    try {
-      await sendContactForm(values);
-      setTouched({});
-      setState(initState);
-      toast({
-        title: "Message Sent!",
-        status: "success",
-        duration: 2000,
-        position: "top",
-      });
-    } catch (error) {
-      setState((prev) => ({
-        ...prev,
-        error: error.message,
-      }));
+
+    if (fullNameResult && emailResult) {
+      try {
+        await sendContactForm(values);
+        setTouched({});
+        setState(initState);
+        toast({
+          title: "Message Sent!",
+          status: "success",
+          duration: 2000,
+          position: "top",
+        });
+      } catch (error) {
+        setState((prev) => ({
+          ...prev,
+          error: error.message,
+        }));
+      }
+    } else {
+      if (!fullNameResult && emailResult) {
+        setState((prev) => ({
+          ...prev,
+          error: "Please make sure the full name field is correct",
+        }));
+      } else if (fullNameResult && !emailResult) {
+        setState((prev) => ({
+          ...prev,
+          error: "Please make sure the email field is correct",
+        }));
+      } else {
+        setState((prev) => ({
+          ...prev,
+          error: "Please make sure the full name and email fields are correct",
+        }));
+      }
     }
   };
 
@@ -130,6 +158,7 @@ const Contact = () => {
         <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
           <FormLabel className="text-white">Full Name</FormLabel>
           <Input
+            id="full-name-value"
             type="text"
             name="name"
             className="contact-form-input"
@@ -144,6 +173,7 @@ const Contact = () => {
         <FormControl isRequired isInvalid={touched.email && !values.email} mb={5}>
           <FormLabel className="text-white">Email</FormLabel>
           <Input
+            id="email-value"
             type="email"
             name="email"
             className="contact-form-input"
