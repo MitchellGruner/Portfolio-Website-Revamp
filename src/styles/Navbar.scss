@@ -11,6 +11,8 @@
     }
 
     .mobile-nav {
+        border-bottom: 1px solid #fff;
+
         .burger-menu {
             height: 100%;
             width: 4em;
@@ -24,7 +26,7 @@
         .burger-bar {
             width: 4em;
             height: 0.5em;
-            background-color: #484B86;
+            background-color: #484B80;
             border-radius: 0.5em;
         }
     
@@ -44,7 +46,7 @@
         }
 
         .icon {
-            color: #484B86 !important;
+            color: #484B80 !important;
         }
     
         /* sliding menu */
@@ -110,17 +112,18 @@
 }
 
 #navbar.navbar-container {
+    border-bottom: 1px solid #fff;
     background-color: rgba(0, 0, 0, 0.9);
     transition: 0.5s ease-in-out;
 
     .desktop-nav {
         .icon {
-            color: #484B86 !important;
+            color: #484B80 !important;
             transition: 0.5s ease-in-out;
         }
 
         a:hover {
-            color: #484B86;
+            color: #484B80;
         }
     }
 }
