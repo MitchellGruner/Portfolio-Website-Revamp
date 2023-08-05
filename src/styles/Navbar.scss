@@ -11,6 +11,8 @@
     }
 
     .mobile-nav {
+        border-bottom: 1px solid #fff;
+
         .burger-menu {
             height: 100%;
             width: 4em;
@@ -110,6 +112,7 @@
 }
 
 #navbar.navbar-container {
+    border-bottom: 1px solid #fff;
     background-color: rgba(0, 0, 0, 0.9);
     transition: 0.5s ease-in-out;
 
