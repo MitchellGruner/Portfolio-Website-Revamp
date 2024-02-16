@@ -1,21 +1,11 @@
 [
     {
         "id": 0,
-        "url": "https://www.electronicexpress.com/brands/tempur-pedic/adapt-series",
-        "image": "tempur-pedic-logo.png",
-        "alt": "Tempur Pedic Logo"
+        "video": "https://www.youtube.com/watch?v=lsxNmd312og"
     },
     {
         "id": 1,
-        "url": "https://www.electronicexpress.com/catalog/190369/ge-gfw850spnrs-50-cuft-sapphire-blue-electric-smart-washer",
-        "image": "pdp-image.png",
-        "alt": "PDP Card Logo"
-    },
-    {
-        "id": 2,
-        "url": "https://www.electronicexpress.com/brands/monogram",
-        "image": "monogram-logo.png",
-        "alt": "Monogram Logo"
+        "video": "https://www.youtube.com/watch?v=FaK_V7UWj1w"
     }
 ]
   
