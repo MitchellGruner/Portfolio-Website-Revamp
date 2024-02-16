@@ -1,27 +1,22 @@
 import React from "react";
 import Image from "next/image";
 
+import dynamic from 'next/dynamic';
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+
 function ProjectDisplay({
     id,
-    url,
-    logo,
-    alt,
+    video,
 }: {
     id: number;
-    url: string;
-    logo: string;
-    alt: string;
+    video: string;
 }) {
     return (
         <div className="project-logo-container mx-auto mb-6 xs:mb-8 md:mb-8 lg:mb-10">
-            <a href={url} className="flex mx-12 xs:mx-4 sm:mx-10 md:mx-6 lg:mx-4">
-                <Image
-                    className="mx-auto"
-                    src={`/static/images/${logo}`}
-                    alt={alt}
-                    width="200"
-                    height="0"
-                    style={{ width: '100%', height: 'auto' }}
+            <a className="flex mx-12 xs:mx-4 sm:mx-10 md:mx-6 lg:mx-4">
+                <ReactPlayer 
+                    className="projects-card-video m-auto my-8"
+                    url={video} 
                 />
             </a>
         </div>
@@ -36,15 +31,13 @@ const WorkProjects = (props) => {
                 <p className="text-md p-4 mb-6 xs:mb-10 2xl:mt-6 2xl:mb-14 xs:text-lg md:text-xl 2xl:text-2xl text-white">After two and a half years of professional work experience as a front end developer at Electronic Express, I have implemented several key features to the website. Some major features would include: the hamburger menu, an overhaul of the cart page and product details card, and several landing pages for leading companies - These were built using HTML and CSS, CSS Animations, JavaScript, jQuery, and Bootstrap as a CSS framework.</p>
             </div>
 
-            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xs:gap-2 sm:gap-4 lg:gap-6 xs:mx-4 sm:mx-6 md:mx-8 lg:mx-32 xl:mx-36">
+            <div className="grid grid-cols-1 md:grid-cols-2 xs:gap-2 sm:gap-4 lg:gap-6 xs:mx-4 sm:mx-6 md:mx-8 lg:mx-32 xl:mx-36">
                 {props.workProjects.workProjects.map((project) => {
                     return (
                         <ProjectDisplay
                             key={project.id}
                             id={project.id}
-                            url={project.url}
-                            logo={project.image}
-                            alt={project.alt}
+                            video={project.video}
                         />
                     )
                 })}
