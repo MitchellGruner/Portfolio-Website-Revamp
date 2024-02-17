@@ -11,4 +11,10 @@
     .icon:hover {
         color: #000;
     }
+
+    .text-transition,
+    .text-transition div {
+        display: flex !important;
+        justify-content: center;
+    }
 }
