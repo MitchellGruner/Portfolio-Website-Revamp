@@ -12,7 +12,7 @@ function ProjectDisplay({
     video: string;
 }) {
     return (
-        <div className="project-logo-container mx-auto mb-6 xs:mb-8 md:mb-8 lg:mb-10">
+        <div className="project-logo-container work-projects-container mx-auto mb-6 xs:mb-8 md:mb-8 lg:mb-10">
             <a className="flex mx-12 xs:mx-4 sm:mx-10 md:mx-6 lg:mx-4">
                 <ReactPlayer 
                     className="projects-card-video m-auto my-8"
@@ -31,7 +31,7 @@ const WorkProjects = (props) => {
                 <p className="text-md p-4 mb-6 xs:mb-10 2xl:mt-6 2xl:mb-14 xs:text-lg md:text-xl 2xl:text-2xl text-white">After two and a half years of professional work experience as a front end developer at Electronic Express, I have implemented several key features to the website. Some major features would include: the hamburger menu, an overhaul of the cart page and product details card, and several landing pages for leading companies - These were built using HTML and CSS, CSS Animations, JavaScript, jQuery, and Bootstrap as a CSS framework.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xs:gap-2 sm:gap-4 lg:gap-6 xs:mx-4 sm:mx-6 md:mx-8 lg:mx-32 xl:mx-36">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xs:gap-2 sm:gap-4 lg:gap-6 xs:mx-4 sm:mx-6 md:mx-8 lg:mx-32 xl:mx-4">
                 {props.workProjects.workProjects.map((project) => {
                     return (
                         <ProjectDisplay
