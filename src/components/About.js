@@ -26,7 +26,7 @@ const About = () => {
             <div className="text-center sm:mx-32 md:mx-42 lg:mx-56 xl:mx-80 2xl:mx-96">
                 <h2 className="text-3xl xs:text-4xl md:text-5xl 2xl:text-6xl font-bold text-white">Mitchell Gruner</h2>
                 <span className="text-xl mt-2 xs:text-2xl md:text-3xl 2xl:text-4xl font-bold text-black block"><TextTransition springConfig={presets.gentle}>{TEXTS[index % TEXTS.length]}</TextTransition></span>
-                <p className="text-md p-4 xs:text-lg md:text-xl 2xl:text-2xl text-white">Passionate about creating mobile-first, responsive websites using React, Next.js, Tailwind, TypeScript, and other development frameworks.</p>
+                <p className="text-md p-4 xs:text-lg md:text-xl 2xl:text-2xl text-white">Passionate about creating mobile-first, responsive websites using React.js, Next.js, Tailwind CSS, TypeScript, and other development frameworks.</p>
             </div>
             <div className="flex justify-around mx-14 mb-10 xs:mt-0 xs:mx-24 xs:mb-6 sm:mx-52 md:mx-72 lg:mx-96 mt-2 2xl:mt-4 2xl:mb-12">
                 <a href="https://github.com/MitchellGruner">

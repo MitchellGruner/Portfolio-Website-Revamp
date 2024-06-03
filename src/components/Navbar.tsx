@@ -93,10 +93,10 @@ const Navbar = () => {
     }
 
     return (
-        <div id="navbar" className={color ? "navbar-container text-white font-semibold 2xl:text-xl fixed top-0 z-50" : "text-white font-semibold 2xl:text-xl fixed top-0 z-50"}>
+        <div id="navbar" className={color ? "flex w-full navbar-container text-white font-semibold 2xl:text-xl fixed top-0 z-50" : "flex w-full text-white font-semibold 2xl:text-xl fixed top-0 z-50"}>
 
             {/* navbar for when user is on root page*/}
-            <nav id="nav-root" className="contents justify-between">
+            <nav id="nav-root" className="w-full contents justify-between">
                 <div className="mobile-nav w-full h-auto">
                     <nav className="w-full h-20 bg-black flex justify-between items-center p-4 xs:pl-6">
                         <div className="flex items-center">
