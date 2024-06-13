@@ -1,72 +1,35 @@
 [
-    {
-      "id": 0,
-      "url": "quiz-list",
-      "image": "quizlist1.png",
-      "alt": "Quiz List Logo",
-      "titleFirst": "Quiz",
-      "titleSecond": "List",
-      "description": "A quiz game created using React.js that allows users to guess an answer to a question in an accordion-style dropdown. If the answer is correct, the user is allowed to continue playing to try and beat their high score. However, if a question is not correctly answered, the game is over and their score gets set to zero.",
-      "demo": "https://master--vermillion-narwhal-b9ab97.netlify.app/",
-      "code": "https://github.com/MitchellGruner/QuizList",
-      "video": "https://www.youtube.com/watch?v=0AWLYyrbZ-Y&t=7s"
-    },
-    {
-        "id": 1,
-        "url": "cloud-vend",
-        "image": "cloudvend1.png",
-        "alt": "Cloud Vend Logo",
-        "titleFirst": "Cloud",
-        "titleSecond": "Vend",
-        "description": "A full-stack web application that allows authenticated users to create profiles, post descriptive items, and post comments on items. Authenticated users can also edit and delete their own items and comments, but can never erase other authenticated user's data. MongoDB, Node.js, and Express.js was used throughout, as well as Passport.js for user authentication.",
-        "code": "https://github.com/MitchellGruner/CloudVend",
-        "video": "https://www.youtube.com/watch?v=PF3A6o_ZkAc"
-      },
-      {
-        "id": 2,
-        "url": "mobile-learning-app",
-        "image": "mobile-learning-app.png",
-        "alt": "Mobile Learning App Logo",
-        "titleFirst": "Mobile Learning",
-        "titleSecond": "App",
-        "description": "A React Native application that allows “Subject Matter Experts” (SME) to post courses, videos, lecture notes, and quizzes to students who are currently enrolled in their course. This application implements the Firebase Realtime Database to store user information. The student's and SME's credentials are also stored within the database. This project was created by a group of six members who carried out their work in two-week long sprints in an Agile environment.",
-        "demo": "https://expo.dev/@calialex/Mobile-Learning-App",
-        "code": "https://github.com/MitchellGruner/Mobile-Learning-App",
-        "video": "https://www.youtube.com/watch?v=sZyEqZzVrc8"
-      },
-      {
-        "id": 3,
-        "url": "the-path",
-        "image": "thepath.png",
-        "alt": "The Path Logo",
-        "titleFirst": "The",
-        "titleSecond": "Path",
-        "description": "An Object-Oriented Programming in Java application that allows users to control an “ant” that must evade “spiders” in the game world. The user must collide with “flags” and “food stations” in order to succeed, and the movements of all of the game objects are clearly visible in a container within an iPad III emulator. This application uses a library that closely resembles Java Swing.",
-        "code": "https://github.com/MitchellGruner/-The-Path-OOP-Java-Project",
-        "video": "https://www.youtube.com/watch?v=0ZhmxCtSjfw"
-      },
-      {
-        "id": 4,
-        "url": "hangman",
-        "image": "hangman.png",
-        "alt": "Hangman Logo",
-        "titleFirst": "Hangman",
-        "titleSecond": "!",
-        "description": "A vanilla JavaScript application that implements HTML and CSS, as well as the Bootstrap framework, that allows end-users to guess letters that are located within a randomly picked word from a pre-defined array. The user may have hints displayed to them, but they all cost the user time - Once the time runs out, the game is over. If the user runs out of lives, the game is also over.",
-        "demo": "https://clever-galileo-8dbff3.netlify.app/",
-        "code": "https://github.com/MitchellGruner/Hangman",
-        "video": "https://www.youtube.com/watch?v=M-pCWe8rcik"
-      },
-      {
-        "id": 5,
-        "url": "baseball-aggressive-analytics",
-        "image": "baseball-aggressive-analytics.png",
-        "alt": "Baseball Aggressive Analytics Logo",
-        "titleFirst": "Baseball",
-        "titleSecond": "Aggressive Analytics",
-        "description": "A data analytics project that implements statistical concepts on a large data set to prove that players have become more aggressive over time. This project was built using the R programming language, and it takes in a single statistical file for input. The data file was taken from Kaggle.com, and it houses all batters that have batted from 1871 to 2015 in Major League Baseball.",
-        "code": "https://github.com/MitchellGruner/Baseball_Aggressive_Analytics",
-        "video": "https://www.youtube.com/watch?v=xojmvRTKvEg"
-      }
-  ]
-  
+  {
+    "id": 0,
+    "url": "averys-pet-sitting",
+    "image": "averyspetsittinglogo1.png",
+    "alt": "Avery's Pet Sitting Logo",
+    "titleFirst": "Avery's",
+    "titleSecond": "Pet Sitting",
+    "description": "A dog and cat sitting portfolio project with the T3 Stack paradigm in mind. This application utilizes Next.js, TypeScript, Tailwind CSS, Sass, jQuery, and functionality for contacting Avery. The website is responsively built using mobile-first practices, and has a clean, modern design. The appication was built following a Figma wireframing for UI/UX design in mind. Avery's website is hosted on Vercel, and is also SEO optimized.",
+    "demo": "https://www.averyspetsitting.com/",
+    "code": "https://github.com/MitchellGruner/Averys-Pet-Sitting"
+  },
+  {
+    "id": 1,
+    "url": "quiz-list",
+    "image": "quizlist1.png",
+    "alt": "Quiz List Logo",
+    "titleFirst": "Quiz",
+    "titleSecond": "List",
+    "description": "A quiz game created using React.js that allows users to guess an answer to a question in an accordion-style dropdown. If the answer is correct, the user is allowed to continue playing to try and beat their high score. However, if a question is not correctly answered, the game is over and their score gets set to zero.",
+    "demo": "https://master--vermillion-narwhal-b9ab97.netlify.app/",
+    "code": "https://github.com/MitchellGruner/QuizList",
+    "video": "https://www.youtube.com/watch?v=0AWLYyrbZ-Y&t=7s"
+  },
+  {
+    "id": 2,
+    "url": "little-lemon",
+    "image": "littlelemonlogo1.png",
+    "alt": "Little Lemon API Logo",
+    "titleFirst": "Little Lemon",
+    "titleSecond": "API",
+    "description": "This is from the Meta Back-End Developer Course offered through Coursera. This is a fully functioning back-end API project using Django and MySQL for a fictional restaurant. This API allows certain users to browse, add, and edit menu items, place orders, browse orders, and assign delivery crew to orders; the delivery crew can then finally deliver the orders.",
+    "code": "https://github.com/MitchellGruner/LittleLemonAPI"
+  }
+]
