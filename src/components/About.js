@@ -32,7 +32,7 @@ const About = () => {
                 <a href="https://github.com/MitchellGruner">
                     <AiFillGithub className="text-white text-2xl md:text-3xl icon" />
                 </a>
-                <a href="https://www.linkedin.com/in/mitchell-gruner-12a4ab163/">
+                <a href="https://www.linkedin.com/in/mitchell-gruner/">
                     <BsLinkedin className="text-white text-2xl md:text-3xl icon" />
                 </a>
                 <a href="https://www.instagram.com/mitchyo_2209/?hl=en">
