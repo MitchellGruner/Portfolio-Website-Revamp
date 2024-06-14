@@ -132,7 +132,7 @@ const Navbar = () => {
             </nav>
 
             {/* navbar for when user is on /projects/* pages */}
-            <nav id="nav-projects" className="contents justify-between">
+            <nav id="nav-projects" className="w-full contents justify-between">
                 <div className="mobile-nav w-full h-auto">
                     <nav className="w-full h-20 bg-black flex justify-between items-center p-4 xs:pl-6">
                         <div className="flex items-center">

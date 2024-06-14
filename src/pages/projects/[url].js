@@ -16,12 +16,9 @@ export function getStaticProps(staticProps) {
 export function getStaticPaths() {
     return {
         paths: [
+            {params: {url: "averys-pet-sitting"}},
             {params: {url: "quiz-list"}},
-            {params: {url: "cloud-vend"}},
-            {params: {url: "mobile-learning-app"}},
-            {params: {url: "the-path"}},
-            {params: {url: "hangman"}},
-            {params: {url: "baseball-aggressive-analytics"}},
+            {params: {url: "little-lemon"}}
         ],
         fallback: false,
     }

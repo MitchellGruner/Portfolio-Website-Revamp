@@ -4,21 +4,16 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
-import {BsCardList} from "react-icons/bs";
-import {AiOutlineCloud} from "react-icons/ai";
-import {AiOutlineMobile} from "react-icons/ai";
-import {GiStonePath} from "react-icons/gi";
-import {ImMan} from "react-icons/im";
-import {CiBaseball} from "react-icons/ci";
+import {LuBone} from "react-icons/lu";
+import {MdOutlineQuiz} from "react-icons/md";
+import {CiLemon} from "react-icons/ci";
+
 import Link from 'next/link';
 
 let iconArray = [
-    <BsCardList key={0} />,
-    <AiOutlineCloud key={1} />,
-    <AiOutlineMobile key={2} />,
-    <GiStonePath key={3} />,
-    <ImMan key={4} />,
-    <CiBaseball key={5} />
+    <LuBone key={0} />,
+    <MdOutlineQuiz key={1} />,
+    <CiLemon key={2} />
 ]
 
 function DemoDisplay (demo) {
