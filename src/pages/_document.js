@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en" suppressHydrationWarning>
       <Head />
       <link rel="shortcut icon" href="/favicon/favicon.ico?v=1" />
-      <body>
+      <body id="main-body">
         <Main />
         <NextScript />
       </body>
