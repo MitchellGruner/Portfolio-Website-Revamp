@@ -38,7 +38,7 @@ const Projects = (props) => {
             <div id="projects-section"></div>
 
             <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xs:gap-2 sm:gap-4 lg:gap-6 xs:mx-4 sm:mx-6 md:mx-8 lg:mx-32 xl:mx-36">
-                {props.productDetails.productDetails.map((project) => {
+                {props.productDetails.productDetails.slice(0, 3).map((project) => {
                     return (
                         <ProjectLogo
                             key={project.id}

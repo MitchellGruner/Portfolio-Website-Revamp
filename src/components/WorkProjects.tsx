@@ -40,7 +40,7 @@ const WorkProjects = (props) => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xs:gap-2 sm:gap-4 lg:gap-6 xs:mx-4 sm:mx-6 md:mx-8 lg:mx-32 xl:mx-4">
-                {props.workProjects.workProjects.map((project) => {
+                {props.productDetails.productDetails.slice(3, 6).map((project) => {
                     return (
                         <ProjectLogo
                             key={project.id}
