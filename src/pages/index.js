@@ -8,13 +8,11 @@ import Contact from "../components/Contact";
 import WorkProjects from "../components/WorkProjects";
 
 import productDetailsData from "../data/project-details.json";
-import workProjectsData from "../data/work-projects.json";
 
 export async function getStaticProps(context) {
   return {
     props: {
-      productDetails: productDetailsData,
-      workProjects: workProjectsData
+      productDetails: productDetailsData
     },
   };
 }
@@ -30,7 +28,7 @@ const Home = (props) => {
       <div className="2xl:max-w-screen-2xl m-auto pt-24">
         <About />
         <Projects productDetails={props} />
-        <WorkProjects workProjects={props} />
+        <WorkProjects productDetails={props} />
         <ChakraProvider>
           <AppContainer>
             <Contact />
