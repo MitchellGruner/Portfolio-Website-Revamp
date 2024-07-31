@@ -31,5 +31,38 @@
     "titleSecond": "API",
     "description": "This is from the Meta Back-End Developer Course offered through Coursera. This is a fully functioning back-end API project using Django and MySQL for a fictional restaurant. This API allows certain users to browse, add, and edit menu items, place orders, browse orders, and assign delivery crew to orders; the delivery crew can then finally deliver the orders.",
     "code": "https://github.com/MitchellGruner/LittleLemonAPI"
+  },
+  {
+    "id": 3,
+    "url": "rebate-center",
+    "image": "rebate-center-thumbnail.png",
+    "alt": "Rebate Center Page",
+    "titleFirst": "Rebate",
+    "titleSecond": "Center Page",
+    "description": "A revamped version of the Rebate Center page on Electronic Express's website. This page was built using HTML and CSS, JavaScript, and jQuery, and communicates with a JSON file to display the rebate information. Data that was fetched from the JSON file gets sent to a hash table, which is then dynamically iterated over with memory allocation in mind. Users can filter the rebates by category and/or brand, and their selection can be reset by clicking on the 'remove' button.",
+    "demo": "https://www.electronicexpress.com/rebates",
+    "video": "https://youtu.be/nya4sCwp3HU"
+  },
+  {
+    "id": 4,
+    "url": "cart-page",
+    "image": "cart-page-thumbnail1.png",
+    "alt": "Cart Page",
+    "titleFirst": "Cart",
+    "titleSecond": "Page",
+    "description": "Overhauled the cart page following a Figma wireframe designed by graphic designers. Used HTML and CSS for the structure and styling, as well as JavaScript for DOM manipulation. Created a modal for end users to select an installation service based on products in their cart. Implemented AJAX to update content from the cart page.",
+    "demo": "https://www.electronicexpress.com/cart",
+    "video": "https://www.youtube.com/watch?v=lsxNmd312og"
+  },
+  {
+    "id": 5,
+    "url": "product-details-card",
+    "image": "pdp-image.png",
+    "alt": "Product Details Card Image",
+    "titleFirst": "Product Details",
+    "titleSecond": "Card",
+    "description": "Vastly improved the product details card for every product on the website, following a Figma wireframe from the graphic designers; this was achieved using HTML, CSS, and JavaScript. Also created the current hamburger menu on our website using CSS animations and Bootstrap. Implemented a new financing feature that utilizes the MutationObserver JavaScript API to determine the lowest monthly financing option for each and every product on the website.",
+    "demo": "https://www.electronicexpress.com/catalog/212901/samsung-qn85qe1c-85-in-class-qe1c-qled-4k-smart-tv",
+    "video": "https://www.youtube.com/watch?v=FaK_V7UWj1w"
   }
 ]
