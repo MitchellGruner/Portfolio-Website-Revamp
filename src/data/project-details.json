@@ -34,25 +34,25 @@
   },
   {
     "id": 3,
-    "url": "rebate-center",
-    "image": "rebate-center-thumbnail.png",
-    "alt": "Rebate Center Page",
-    "titleFirst": "Rebate",
-    "titleSecond": "Center Page",
-    "description": "A revamped version of the Rebate Center page on Electronic Express's website. This page was built using HTML and CSS, JavaScript, and jQuery, and communicates with a JSON file to display the rebate information. Data that was fetched from the JSON file gets sent to a hash table, which is then dynamically iterated over with memory allocation in mind. Users can filter the rebates by category and/or brand, and their selection can be reset by clicking on the 'remove' button.",
-    "demo": "https://www.electronicexpress.com/rebates",
-    "video": "https://youtu.be/nya4sCwp3HU"
-  },
-  {
-    "id": 4,
     "url": "cart-page",
-    "image": "cart-page-thumbnail1.png",
+    "image": "cart-page-thumbnail3.jpg",
     "alt": "Cart Page",
     "titleFirst": "Cart",
     "titleSecond": "Page",
     "description": "Overhauled the cart page following a Figma wireframe designed by graphic designers. Used HTML and CSS for the structure and styling, as well as JavaScript for DOM manipulation. Created a modal for end users to select an installation service based on products in their cart. Implemented AJAX to update content from the cart page.",
     "demo": "https://www.electronicexpress.com/cart",
     "video": "https://www.youtube.com/watch?v=lsxNmd312og"
+  },
+  {
+    "id": 4,
+    "url": "rebate-center",
+    "image": "rebate-center-thumbnail2.jpg",
+    "alt": "Rebate Center Page",
+    "titleFirst": "Rebate",
+    "titleSecond": "Center Page",
+    "description": "A revamped version of the Rebate Center page on Electronic Express's website. This page was built using HTML and CSS, JavaScript, and jQuery, and communicates with a JSON file to display the rebate information. Data that was fetched from the JSON file gets sent to a hash table, which is then dynamically iterated over with memory allocation in mind. Users can filter the rebates by category and/or brand, and their selection can be reset by clicking on the 'remove' button.",
+    "demo": "https://www.electronicexpress.com/rebates",
+    "video": "https://youtu.be/nya4sCwp3HU"
   },
   {
     "id": 5,
