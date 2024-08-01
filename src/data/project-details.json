@@ -40,7 +40,6 @@
     "titleFirst": "Cart",
     "titleSecond": "Page",
     "description": "Overhauled the cart page following a Figma wireframe designed by graphic designers. Used HTML and CSS for the structure and styling, as well as JavaScript for DOM manipulation. Created a modal for end users to select an installation service based on products in their cart. Implemented AJAX to update content from the cart page.",
-    "demo": "https://www.electronicexpress.com/cart",
     "video": "https://www.youtube.com/watch?v=lsxNmd312og"
   },
   {
@@ -51,7 +50,6 @@
     "titleFirst": "Rebate",
     "titleSecond": "Center Page",
     "description": "A revamped version of the Rebate Center page on Electronic Express's website. This page was built using HTML and CSS, JavaScript, and jQuery, and communicates with a JSON file to display the rebate information. Data that was fetched from the JSON file gets sent to a hash table, which is then dynamically iterated over with memory allocation in mind. Users can filter the rebates by category and/or brand, and their selection can be reset by clicking on the 'remove' button.",
-    "demo": "https://www.electronicexpress.com/rebates",
     "video": "https://youtu.be/nya4sCwp3HU"
   },
   {
@@ -62,7 +60,6 @@
     "titleFirst": "Product Details",
     "titleSecond": "Card",
     "description": "Vastly improved the product details card for every product on the website, following a Figma wireframe from the graphic designers; this was achieved using HTML, CSS, and JavaScript. Also created the current hamburger menu on our website using CSS animations and Bootstrap. Implemented a new financing feature that utilizes the MutationObserver JavaScript API to determine the lowest monthly financing option for each and every product on the website.",
-    "demo": "https://www.electronicexpress.com/catalog/212901/samsung-qn85qe1c-85-in-class-qe1c-qled-4k-smart-tv",
     "video": "https://www.youtube.com/watch?v=FaK_V7UWj1w"
   }
 ]
