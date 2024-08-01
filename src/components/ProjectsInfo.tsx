@@ -24,6 +24,14 @@ function DemoDisplay (demo) {
     }
 }
 
+function CodeDisplay (code) {
+    if (Object.values(code).toString().length > 0) {
+        return (
+            <a href={Object.values(code).toString()} className="flex justify-center items-center text-white bg-black rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md 2xl:text-lg">Code</a>
+        )
+    }
+}
+
 function NavLinks({
     id,
     image,
@@ -42,7 +50,7 @@ function NavLinks({
     titleSecond: string;
     description: string;
     demo?: string;
-    code: string;
+    code?: string;
     video: string;
 }) {
     return (
@@ -70,7 +78,7 @@ function NavLinks({
                     <p className="text-white block m-1 xs:m-2 text-md sm:text-lg 2xl:text-xl">{description}</p>
                     <div className="flex mt-5 xs:mt-6">
                         <DemoDisplay demo={demo} />
-                        <a href={code} className="flex justify-center items-center text-white bg-black rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md 2xl:text-lg">Code</a>
+                        <CodeDisplay code={code} />
                     </div>
                 </div>
                 <div id="projects-back" className="projects-card-go-back-btn justify-end">
