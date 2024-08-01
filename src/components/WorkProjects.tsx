@@ -4,19 +4,27 @@ import Image from "next/image";
 import dynamic from 'next/dynamic';
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
-function ProjectDisplay({
+function ProjectLogo({
     id,
-    video,
+    url,
+    logo,
+    alt,
 }: {
     id: number;
-    video: string;
+    url: string;
+    logo: string;
+    alt: string;
 }) {
     return (
-        <div className="project-logo-container work-projects-container mx-auto mb-6 xs:mb-8 md:mb-8 lg:mb-10">
-            <a className="flex mx-12 xs:mx-4 sm:mx-10 md:mx-6 lg:mx-4">
-                <ReactPlayer 
-                    className="projects-card-video m-auto my-8"
-                    url={video} 
+        <div className="project-logo-container mx-auto mb-6 xs:mb-8 md:mb-8 lg:mb-10">
+            <a key={id} href={`/projects/${url}`} className="flex mx-12 xs:mx-4 sm:mx-10 md:mx-6 lg:mx-4">
+                <Image
+                    className="mx-auto"
+                    src={`/static/images/${logo}`}
+                    alt={alt}
+                    width="200"
+                    height="0"
+                    style={{ width: '100%', height: 'auto' }}
                 />
             </a>
         </div>
@@ -32,12 +40,14 @@ const WorkProjects = (props) => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xs:gap-2 sm:gap-4 lg:gap-6 xs:mx-4 sm:mx-6 md:mx-8 lg:mx-32 xl:mx-4">
-                {props.workProjects.workProjects.map((project) => {
+                {props.productDetails.productDetails.slice(3, 6).map((project) => {
                     return (
-                        <ProjectDisplay
+                        <ProjectLogo
                             key={project.id}
                             id={project.id}
-                            video={project.video}
+                            url={project.url}
+                            logo={project.image}
+                            alt={project.alt}
                         />
                     )
                 })}
