@@ -17,6 +17,7 @@ export function getStaticPaths() {
     return {
         paths: [
             {params: {url: "averys-pet-sitting"}},
+            {params: {url: "cloud-vend"}},
             {params: {url: "quiz-list"}},
             {params: {url: "little-lemon"}},
             {params: {url: "rebate-center"}},
