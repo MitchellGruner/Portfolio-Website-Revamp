@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 import {LuBone} from "react-icons/lu";
+import {CiCloud} from "react-icons/ci";
 import {MdOutlineQuiz} from "react-icons/md";
 import {CiLemon} from "react-icons/ci";
 
@@ -12,8 +13,9 @@ import Link from 'next/link';
 
 let iconArray = [
     <LuBone key={0} />,
-    <MdOutlineQuiz key={1} />,
-    <CiLemon key={2} />
+    <CiCloud key={1} />,
+    <MdOutlineQuiz key={2} />,
+    <CiLemon key={3} />
 ]
 
 function DemoDisplay (demo) {
