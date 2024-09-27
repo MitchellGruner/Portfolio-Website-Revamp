@@ -12,6 +12,17 @@
   },
   {
     "id": 1,
+    "url": "cloud-vend",
+    "image": "cloudvend.png",
+    "alt": "Cloud Vend Logo",
+    "titleFirst": "Cloud",
+    "titleSecond": "Vend",
+    "description": "A full-stack web application that allows authenticated users to create profiles, post descriptive items, and post comments on items. Authenticated users can also delete their own items and comments, but can never erase other people’s data. MongoDB, Node.js, and Express.js was used throughout, as well as Passport.js for user authentication.",
+    "demo": "https://www.cloudvend.onrender.com/",
+    "code": "https://github.com/MitchellGruner/CloudVend"
+  },
+  {
+    "id": 2,
     "url": "quiz-list",
     "image": "quizlist1.png",
     "alt": "Quiz List Logo",
@@ -23,7 +34,7 @@
     "video": "https://www.youtube.com/watch?v=0AWLYyrbZ-Y&t=7s"
   },
   {
-    "id": 2,
+    "id": 3,
     "url": "little-lemon",
     "image": "littlelemonlogo1.png",
     "alt": "Little Lemon API Logo",
@@ -33,7 +44,7 @@
     "code": "https://github.com/MitchellGruner/LittleLemonAPI"
   },
   {
-    "id": 3,
+    "id": 4,
     "url": "cart-page",
     "image": "cart-page-thumbnail3.jpg",
     "alt": "Cart Page",
@@ -43,7 +54,7 @@
     "video": "https://www.youtube.com/watch?v=lsxNmd312og"
   },
   {
-    "id": 4,
+    "id": 5,
     "url": "rebate-center",
     "image": "rebate-center-thumbnail2.jpg",
     "alt": "Rebate Center Page",
@@ -53,7 +64,7 @@
     "video": "https://youtu.be/nya4sCwp3HU"
   },
   {
-    "id": 5,
+    "id": 6,
     "url": "product-details-card",
     "image": "pdp-image.png",
     "alt": "Product Details Card Image",
