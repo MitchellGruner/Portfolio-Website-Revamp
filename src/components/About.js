@@ -1,7 +1,7 @@
 import React from "react";
 
 import TextTransition, { presets } from 'react-text-transition';
-const TEXTS = ['Front End Development', 'Responsive Web Design', 'UI Design'];
+const TEXTS = ['Front-End Development', 'Responsive Web Design', 'UI Design'];
 
 import {BsLinkedin} from "react-icons/bs";
 import {AiFillGithub} from "react-icons/ai";
