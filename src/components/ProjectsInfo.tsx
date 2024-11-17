@@ -12,8 +12,8 @@ import {CiLemon} from "react-icons/ci";
 import Link from 'next/link';
 
 let iconArray = [
-    <LuBone key={0} />,
-    <CiCloud key={1} />,
+    <CiCloud key={0} />,
+    <LuBone key={1} />,
     <MdOutlineQuiz key={2} />,
     <CiLemon key={3} />
 ]

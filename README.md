@@ -1,6 +1,6 @@
 # Portfolio-Website-Revamp
 This project uses Next.js, Tailwind, TypeScript, Sass, HTML and CSS, and JavaScript, and implements a contact form using ChakraProvider.
-My website contains an about section, which briefly showcases my skills as a Front End Developer, a projects section that contains my personal projects, as well as my professional work projects, and a contact section* with a form that connects to my email.
+My website contains an about section, which briefly showcases my skills as a Front-End Developer, a projects section that contains my personal projects, as well as my professional work projects, and a contact section* with a form that connects to my email.
 
 This is my personal website that showcases my web development and design skills, and was designed by following conventional git practices (pull requests were made, reviewed, and merged to the main branch which was then launched via Vercel to production) - This website was designed following a personalized Figma project shown below.
 

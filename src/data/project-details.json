@@ -1,6 +1,18 @@
 [
   {
     "id": 0,
+    "url": "cloud-vend",
+    "image": "cloudvend.png",
+    "alt": "Cloud Vend Logo",
+    "titleFirst": "Cloud",
+    "titleSecond": "Vend",
+    "description": "A full-stack web application that allows authenticated users to create profiles, post descriptive items, and post comments on items. Authenticated users can also delete their own items and comments, but can never erase other people’s data. MongoDB, Node.js, and Express.js was used throughout, as well as Passport.js for user authentication.",
+    "demo": "https://cloudvend.onrender.com/",
+    "code": "https://github.com/MitchellGruner/CloudVend",
+    "video": "https://youtu.be/YpHIcQliQ0g?si=zNTc6phfUQvrqsAa"
+  },
+  {
+    "id": 1,
     "url": "averys-pet-sitting",
     "image": "averyspetsittinglogo1.png",
     "alt": "Avery's Pet Sitting Logo",
@@ -9,17 +21,6 @@
     "description": "A dog and cat sitting portfolio project with the T3 Stack paradigm in mind. This application utilizes Next.js, TypeScript, Tailwind CSS, Sass, jQuery, and functionality for contacting Avery. The website is responsively built using mobile-first practices, and has a clean, modern design. This dog and cat sitting website was built following a Figma wireframing for UI/UX design, and is also SEO optimized.",
     "demo": "https://www.averyspetsitting.com/",
     "code": "https://github.com/MitchellGruner/Averys-Pet-Sitting"
-  },
-  {
-    "id": 1,
-    "url": "cloud-vend",
-    "image": "cloudvend.png",
-    "alt": "Cloud Vend Logo",
-    "titleFirst": "Cloud",
-    "titleSecond": "Vend",
-    "description": "A full-stack web application that allows authenticated users to create profiles, post descriptive items, and post comments on items. Authenticated users can also delete their own items and comments, but can never erase other people’s data. MongoDB, Node.js, and Express.js was used throughout, as well as Passport.js for user authentication.",
-    "demo": "https://cloudvend.onrender.com/",
-    "code": "https://github.com/MitchellGruner/CloudVend"
   },
   {
     "id": 2,
