@@ -20,7 +20,8 @@
     "titleSecond": "Pet Sitting",
     "description": "A dog and cat sitting portfolio project with the T3 Stack paradigm in mind. This application utilizes Next.js, TypeScript, Tailwind CSS, Sass, jQuery, and functionality for contacting Avery. The website is responsively built using mobile-first practices, and has a clean, modern design. This dog and cat sitting website was built following a Figma wireframing for UI/UX design, and is also SEO optimized.",
     "demo": "https://www.averyspetsitting.com/",
-    "code": "https://github.com/MitchellGruner/Averys-Pet-Sitting"
+    "code": "https://github.com/MitchellGruner/Averys-Pet-Sitting",
+    "video": "https://youtu.be/Crq1DBZMyVE"
   },
   {
     "id": 2,
@@ -32,7 +33,7 @@
     "description": "A quiz game created using React.js that allows users to guess an answer to a question in an accordion-style dropdown. If the answer is correct, the user is allowed to continue playing to try and beat their high score. However, if a question is not correctly answered, the game is over and their score gets set to zero.",
     "demo": "https://master--vermillion-narwhal-b9ab97.netlify.app/",
     "code": "https://github.com/MitchellGruner/QuizList",
-    "video": "https://www.youtube.com/watch?v=0AWLYyrbZ-Y&t=7s"
+    "video": "https://youtu.be/AtKMLPyzRns"
   },
   {
     "id": 3,
