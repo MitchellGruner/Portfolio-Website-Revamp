@@ -1,4 +1,9 @@
 #about {
+    background-image: url("/static/images/dubrovnik.background.image1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
     .rounded-full {
         border: 1px solid #484B86;
     }
@@ -7,14 +12,29 @@
     .icon:hover {
         transition: 0.5s ease-in-out;
     }
-
+    
     .icon:hover {
-        color: #000;
+        color: #FCB1A4;
     }
 
-    .text-transition,
-    .text-transition div {
-        display: flex !important;
-        justify-content: center;
+    h1 {
+        margin-bottom: -0.5em;
+
+        @media (min-width: 768px) {
+            margin-bottom: -0.4em;
+        }
+        @media (min-width: 1400px) {
+            margin-bottom: -0.3em;
+        }
+
+        .text-transition,
+        .text-transition div {
+            display: flex !important;
+            justify-content: center;
+
+            @media (min-width: 576px) {
+                justify-content: flex-start;
+            }
+        }
     }
 }
