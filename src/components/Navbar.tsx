@@ -1,5 +1,6 @@
 "use client";
 import React, {useState} from "react";
+import Image from "next/image";
 import {Link} from "react-scroll";
 import {SiCodeberg} from "react-icons/si";
 
@@ -100,8 +101,7 @@ const Navbar = () => {
                 <div className="mobile-nav w-full h-auto">
                     <nav className="w-full h-20 bg-black flex justify-between items-center p-4 xs:pl-6">
                         <div className="flex items-center">
-                            <h1 className="text-xl xs:text-2xl"><Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl">Mitchell Gruner</Link></h1>
-                            <SiCodeberg className="icon ml-2 text-xl xs:text-2xl" />
+                            <h1 className="text-xl xs:text-2xl"><Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl"><Image src="/static/images/mitchell-gruner-logo.png" alt="Mitchell Gruner Logo" width="80" height="0" className="pt-0" /></Link></h1>
                         </div>
                         <div className="burger-menu" onClick={updateMenuRoot}>
                             <div className={burgerClassRoot}></div>
@@ -119,8 +119,11 @@ const Navbar = () => {
                 <div className="2xl:max-w-screen-2xl m-auto desktop-nav">
                     <nav className="h-20 flex justify-between p-6 md:px-8 lg:px-10 xl:px-16 2xl:px-14">
                         <div className="flex items-center">
-                            <h1 className="mr-2 md:mr-4"><Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl" onClick={updateMenuRoot}>Mitchell Gruner</Link></h1>
-                            <SiCodeberg className="icon text-xl md:text-2xl 2xl:text-3xl" />
+                            <h1 className="mr-2 md:mr-4">
+                                <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl" onClick={updateMenuRoot}>
+                                    <Image src="/static/images/mitchell-gruner-logo.png" alt="Mitchell Gruner" width="80" height="0" className="pt-0" />
+                                </Link>
+                            </h1>
                         </div>
                         <ul className="flex items-center">
                             <NavLinksRoot link="about" title="About" />
