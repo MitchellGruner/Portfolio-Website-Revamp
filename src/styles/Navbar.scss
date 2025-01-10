@@ -14,18 +14,18 @@
         border-bottom: 1px solid #fff;
 
         .burger-menu {
-            height: 100%;
+            height: 80%;
             width: 4em;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: flex-end;
             justify-content: space-between;
             cursor: pointer;
         }
     
         .burger-bar {
-            width: 4em;
-            height: 0.5em;
+            width: 3em;
+            height: 0.3em;
             background-color: #fff;
             border-radius: 0.5em;
         }
