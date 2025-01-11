@@ -14,12 +14,14 @@ module.exports = {
       'lg': '992px',
       'xl': '1200px',
       '2xl': '1400px',
+      '3xl': '1600px',
     },
     colors: {
       'white': '#fff',
       'black': '#000',
       'blue': '#484B80',
       'navy': '#1c2e4a',
+      'cream': '#FBB0A2',
     },
     extend: {
       backgroundImage: {
