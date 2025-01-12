@@ -6,6 +6,18 @@
             backdrop-filter: blur( 12px );
             -webkit-backdrop-filter: blur( 12px );
             border-radius: 10px;
+
+            h1 {
+                p {
+                    display: inline-block;
+                    line-height: 1em;
+                    margin-top: 0em;
+                    background-size: 100% 15%;
+                    background-repeat: repeat-x;
+                    background-position: left 0% bottom 0%;
+                    background-image: linear-gradient(179deg, #fff 0%, #fff 50%, transparent 54%, transparent 100%);
+                }
+            }
         }
 
         a,
