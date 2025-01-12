@@ -1,5 +1,6 @@
 "use client";
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
+import { useRouter } from 'next/router';
 import Image from "next/image";
 import {Link} from "react-scroll";
 import {SiCodeberg} from "react-icons/si";
@@ -19,13 +20,59 @@ if (typeof window !== 'undefined' && typeof document !== "undefined") {
 function NavLinksRoot({
     link,
     title,
+    scroll,
 }: {
     link: string;
     title: string;
+    scroll: boolean;
 }) {
+    const router = useRouter();
+    const clickedElementRef = useRef<HTMLAnchorElement | null>(null);
+
+    /* this function will be called when a nav element is clicked on tablet and desktop (non-hamburger menu nav links). */
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        if (scroll) {
+            e.preventDefault();
+            clickedElementRef.current = e.currentTarget;
+
+            if (router.pathname !== '/') {
+                router.push(`/?scrollTo=${link}`).then(() => {
+                    if (link === 'projects' || link === 'contact') {
+                        setTimeout(() => {
+                            const element = document.getElementById(link);
+                            if (element) {
+                                clickedElementRef.current?.click();
+                            }
+                        }, 1000);
+                    }
+                });
+            } else {
+                const element = document.getElementById(link);
+                if (element) {
+                    const offset = -100;
+                    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition + offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        }
+    };
+
     return (
         <li className="px-4 text-lg md:text-xl 2xl:text-2xl">
-            <Link to={link} spy={true} smooth={true} offset={-100} duration={500}>{title}</Link>
+            {scroll ? (
+                <a href={`#${link}`} onClick={handleClick} ref={clickedElementRef}>
+                    {title}
+                </a>
+            ) : (
+                <a href={link}>
+                    {title}
+                </a>
+            )}
         </li>
     );
 }
@@ -45,6 +92,37 @@ function NavLinksProjects({
 }
 
 const Navbar = () => {
+    const router = useRouter();
+    const offset = -100;
+
+    const handleScrollClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, link: string) => {
+        e.preventDefault();
+        if (router.pathname !== '/') {
+            router.push(`/?scrollTo=${link}&offset=${offset}`);
+        } else {
+            const scrollFunction = () => {
+                const element = document.getElementById(link);
+                if (element) {
+                    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition + offset;
+    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            };
+    
+            setTimeout(() => {
+                scrollFunction();
+                if (link === 'contact') {
+                    setTimeout(scrollFunction, 500);
+                }
+            }, 500);
+        }
+        updateMenuRoot();
+    };
+
     /* used for adding background-color for navbar on scroll */
     const [color, setColor] = useState(false);
     const changeColor = () => {
@@ -111,9 +189,10 @@ const Navbar = () => {
                     </nav>
 
                     <div className={menuClassRoot}>
-                        <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenuRoot}>About</Link>
-                        <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenuRoot}>Projects</Link>
-                        <Link to="contact" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl xs:text-2xl" onClick={updateMenuRoot}>Contact</Link>
+                    <a href="#about" onClick={(e) => handleScrollClick(e, 'about')} className="block text-xl xs:text-2xl">About</a>
+                    <a href="#projects" onClick={(e) => handleScrollClick(e, 'projects')} className="block text-xl xs:text-2xl">Projects</a>
+                    <a href="#contact" onClick={(e) => handleScrollClick(e, 'contact')} className="block text-xl xs:text-2xl">Contact</a>
+                    <a href="/blog" className="block text-xl xs:text-2xl">Blog</a>
                     </div>
                 </div>
                 <div className="2xl:max-w-screen-2xl m-auto desktop-nav">
@@ -126,9 +205,10 @@ const Navbar = () => {
                             </h1>
                         </div>
                         <ul className="flex items-center">
-                            <NavLinksRoot link="about" title="About" />
-                            <NavLinksRoot link="projects" title="Projects" />
-                            <NavLinksRoot link="contact" title="Contact" />
+                            <NavLinksRoot link="about" title="About" scroll={true} />
+                            <NavLinksRoot link="projects" title="Projects" scroll={true} />
+                            <NavLinksRoot link="contact" title="Contact" scroll={true} />
+                            <NavLinksRoot link="/blog" title="Blog" scroll={false} />
                         </ul>
                     </nav>
                 </div>
@@ -165,6 +245,7 @@ const Navbar = () => {
                             <NavLinksProjects link="" title="About" />
                             <NavLinksProjects link="projects-section" title="Projects" />
                             <NavLinksProjects link="contact-section" title="Contact" />
+                            <NavLinksProjects link="blog" title="Blog" />
                         </ul>
                     </nav>
                 </div>
