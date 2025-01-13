@@ -57,7 +57,7 @@ const Home = (props) => {
       </Head>
 
       <About />
-      <div className="2xl:max-w-screen-2xl m-auto pt-24 bg-image">
+      <div className="2xl:max-w-screen-2xl m-auto pt-24">
         <Projects productDetails={props} />
         <WorkProjects productDetails={props} />
         <ChakraProvider>
