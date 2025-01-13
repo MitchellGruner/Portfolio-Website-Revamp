@@ -22,8 +22,8 @@ const About = () => {
       }, []);
 
     return (
-        <div id="about" className="h-auto mb-12 xs:mb-16 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-36">
-            <div className="relative 2xl:max-w-screen-2xl m-auto pt-24 pb-44 lg:pb-36">
+        <div id="about" className="h-auto pb-12 xs:pb-16 sm:pb-20 md:pb-24 lg:pb-28 xl:pb-32 2xl:pb-36">
+            <div className="relative 2xl:max-w-screen-2xl m-auto pt-24 pb-44 lg:pb-0">
                 <div className="text-center sm:max-w-[515px] md:max-w-[635px] lg:max-w-[inherit] xl:max-w-[700px] sm:text-left sm:mr-10 sm:ml-6 lg:ml-8 lg:mt-4 lg:mr-96 xl:mr-[31em] md:mx-42 xl:ml-20 2xl:ml-24">
                     <h1><span className="mt-2 text-lg md:text-xl 2xl:text-2xl font-bold text-cream block"><TextTransition springConfig={presets.gentle}>{TEXTS[index % TEXTS.length]}</TextTransition></span></h1>
                     <h2 className="text-3xl xs:text-4xl md:text-5xl font-bold text-white">Mitchell Gruner</h2>
