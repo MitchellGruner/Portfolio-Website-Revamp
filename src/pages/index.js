@@ -1,3 +1,6 @@
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+
 import {ChakraProvider} from "@chakra-ui/react";
 import AppContainer from "../components/AppContainer";
 
@@ -18,6 +21,34 @@ export async function getStaticProps(context) {
 }
 
 const Home = (props) => {
+  const router = useRouter();
+
+  /* this function will be called on mobile devices (when hamburger menu is present). */
+  useEffect(() => {
+      if (router.query.scrollTo) {
+          const scrollFunction = () => {
+              const element = document.getElementById(router.query.scrollTo);
+              const offset = parseInt(router.query.offset, 10) || 0;
+              if (element) {
+                  const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                  const offsetPosition = elementPosition + offset;
+
+                  window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
+                  });
+              }
+          };
+
+          setTimeout(() => {
+              scrollFunction();
+              if (router.query.scrollTo === 'contact') {
+                  setTimeout(scrollFunction, 500);
+              }
+          }, 500);
+      }
+  }, [router.query.scrollTo, router.query.offset]);
+
   return (
     <div className="m-auto">
       <Head>

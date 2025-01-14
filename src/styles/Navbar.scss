@@ -2,10 +2,6 @@
     transition: 0.5s ease-in-out;
     width: -webkit-fill-available;
 
-    #nav-projects {
-        display: none;
-    }
-
     .icon {
         color: #fff !important;
     }
@@ -32,7 +28,7 @@
     
         .menu {
             width: 100%;
-            background-color: #EFE8FE;
+            background-color: #fff;
             position: absolute;
             top: 5em;
             z-index: 0;
@@ -70,7 +66,7 @@
         }
     
         .burger-bar.clicked:nth-child(3) {
-            transform: rotate(135deg) translate(-0.5em, 1em);
+            transform: rotate(135deg) translate(-0.2em, 0.9em);
             transition: 0.5s ease-in-out;
         }
     

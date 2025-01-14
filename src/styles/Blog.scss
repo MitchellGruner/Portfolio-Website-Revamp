@@ -1,0 +1,62 @@
+section#blog-page {
+    div {
+        a {
+            background: rgba( 255, 255, 255, 0.2 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 12px );
+            -webkit-backdrop-filter: blur( 12px );
+            border-radius: 10px;
+
+            padding: 1.8em;
+
+            @media (min-width: 400px) {
+                padding: 1em;
+            }
+
+            @media (min-width: 768px) {
+                padding: 1.4em;
+            }
+
+            @media (min-width: 992px) {
+                padding: 2em;
+            }
+
+            @media (min-width: 1400px) {
+                padding: 3em;
+            }
+
+            figure {
+                img {
+                    max-width: 85%;
+                    height: auto;
+                    width: auto;
+                }
+
+                @media (min-width: 768px) and (max-width: 991px) {
+                    img {
+                        max-width: 80%;
+                    }
+                }
+            }
+
+            div {
+                p {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    white-space: normal;
+                }
+            }
+        }
+
+        a,
+        a:hover {
+            transition: 0.5s ease-in-out;
+        }
+
+        a:hover {
+            background: rgba( 255, 255, 255, 0.4 );
+        }
+    }
+}
