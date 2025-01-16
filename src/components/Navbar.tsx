@@ -156,7 +156,7 @@ const Navbar = () => {
                 <div className="mobile-nav w-full h-auto">
                     <nav className="w-full h-20 bg-black flex justify-between items-center p-4 xs:pl-6">
                         <div className="flex items-center">
-                            <ScrollLink to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl"><Image src="/static/images/mitchell-gruner-logo.png" alt="Mitchell Gruner Logo" width="80" height="0" className="pt-0" /></ScrollLink>
+                            <a href="https://mitchellgruner.com" className="block text-xl md:text-2xl 2xl:text-3xl"><Image src="/static/images/mitchell-gruner-logo.png" alt="Mitchell Gruner Logo" width="80" height="0" className="pt-0" /></a>
                         </div>
                         <div className="burger-menu" onClick={updateMenuRoot}>
                             <div className={burgerClassRoot}></div>
@@ -166,18 +166,16 @@ const Navbar = () => {
                     </nav>
 
                     <div className={menuClassRoot}>
-                    <a href="#about" onClick={(e) => handleScrollClick(e, 'about')} className="block text-xl xs:text-2xl">About</a>
-                    <a href="#projects" onClick={(e) => handleScrollClick(e, 'projects')} className="block text-xl xs:text-2xl">Projects</a>
-                    <a href="#contact" onClick={(e) => handleScrollClick(e, 'contact')} className="block text-xl xs:text-2xl">Contact</a>
-                    <Link href="/blog" className="block text-xl xs:text-2xl" onClick={closeMenu}>Blog</Link>
+                        <a href="#about" onClick={(e) => handleScrollClick(e, 'about')} className="block text-xl xs:text-2xl">About</a>
+                        <a href="#projects" onClick={(e) => handleScrollClick(e, 'projects')} className="block text-xl xs:text-2xl">Projects</a>
+                        <a href="#contact" onClick={(e) => handleScrollClick(e, 'contact')} className="block text-xl xs:text-2xl">Contact</a>
+                        <Link href="/blog" className="block text-xl xs:text-2xl" onClick={closeMenu}>Blog</Link>
                     </div>
                 </div>
                 <div className="2xl:max-w-screen-2xl w-full m-auto desktop-nav">
                     <nav className="h-20 w-full flex justify-between p-6 md:px-8 lg:px-10 xl:px-16 2xl:px-14">
                         <div className="flex items-center">
-                            <ScrollLink to="about" spy={true} smooth={true} offset={-100} duration={500} className="block text-xl md:text-2xl 2xl:text-3xl" onClick={updateMenuRoot}>
-                                <Image src="/static/images/mitchell-gruner-logo.png" alt="Mitchell Gruner" width="80" height="0" className="pt-0" />
-                            </ScrollLink>
+                            <a href="https://mitchellgruner.com" className="block text-xl md:text-2xl 2xl:text-3xl" onClick={updateMenuRoot}><Image src="/static/images/mitchell-gruner-logo.png" alt="Mitchell Gruner Logo" width="80" height="0" className="pt-0" /></a>
                         </div>
                         <ul className="flex items-center">
                             <NavLinksRoot link="about" title="About" scroll={true} />
