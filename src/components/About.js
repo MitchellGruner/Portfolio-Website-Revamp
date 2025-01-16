@@ -40,7 +40,7 @@ const About = () => {
                         <BsInstagram className="text-white text-2xl md:text-3xl 2xl:text-4xl icon" />
                     </a>
                 </div>
-                <div className="absolute right-[2em] sm:right-[2.4em] xl:right-[4.4em] 2xl:right-[7em] sm:top-[27em] md:top-[25em] lg:top-[16em] xl:top-[16.5em] max-w-[190px] sm:max-w-[230px] md:max-w-[280px] lg:max-w-[300px] xl:max-w-[350px] 2xl:max-w-[500px] mt-6 w-2/3 xs:w-7/12 sm:w-2/5 md:w-96 2xl:w-[25em] m-auto">
+                <div className="absolute right-[2em] sm:right-[2.4em] xl:right-[4.4em] 2xl:right-[7em] sm:top-[27em] md:top-[25em] lg:top-[16em] xl:top-[12.5em] 2xl:top-[14.5em] max-w-[190px] sm:max-w-[230px] md:max-w-[280px] lg:max-w-[300px] xl:max-w-[350px] 2xl:max-w-[500px] mt-6 w-2/3 xs:w-7/12 sm:w-2/5 md:w-96 2xl:w-[25em] m-auto">
                     <Image src={AboutImage} priority className="profile-picture" alt="About Picture of Myself" />
                 </div>
             </div>
