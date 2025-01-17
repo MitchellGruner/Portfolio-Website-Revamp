@@ -6,7 +6,7 @@
     "alt": "Cloud Vend Logo",
     "title": "CloudVend",
     "description": "A full-stack web application that allows authenticated users to create profiles, post descriptive items, and post comments on items. Authenticated users can also delete their own items and comments, but can never erase other people’s data. MongoDB, Node.js, and Express.js was used throughout, as well as Passport.js for user authentication.",
-    "demo": "https://cloudvend.onrender.com/",
+    "demo": "https://cloudvend.onrender-2.com/",
     "code": "https://github.com/MitchellGruner/CloudVend",
     "video": "https://youtu.be/YpHIcQliQ0g?si=zNTc6phfUQvrqsAa"
   },
