@@ -125,9 +125,9 @@ const Contact = () => {
           </div>
           <div className="flex my-1">
             <span className="text-white text-xl sm:text-2xl mr-2 sm:mr-4"><BsBuilding /></span>
-            <a href="https://www.google.com/maps/place/418+Harding+Industrial+Dr,+Nashville,+TN+37211/@36.0926255,-86.6946444,17z/data=!3m1!4b1!4m6!3m5!1s0x88646ef9f7b938f9:0xdf69b6688eceae4e!8m2!3d36.0926255!4d-86.6920695!16s%2Fg%2F11c1kycp45?entry=ttu" className="text-black font-bold">Electronic Express</a>
+            <a href="https://www.google.com/maps/place/HealthStream/@36.1635151,-86.791141,17z/data=!4m15!1m8!3m7!1s0x8864668aac87681b:0xd7d75bd2bfa3c67e!2sHealthStream!8m2!3d36.1637768!4d-86.7912083!10e5!16s%2Fg%2F1tk_kfzl!3m5!1s0x8864668aac87681b:0xd7d75bd2bfa3c67e!8m2!3d36.1637768!4d-86.7912083!16s%2Fg%2F1tk_kfzl?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" className="text-black font-bold">HealthStream</a>
           </div>
-          <p className="text-white text-sm mt-4 sm:mt-6">Professional Front-End Developer with three years of relevant experience. Graduated from California State University, Sacramento with a B.S. in Computer Science in May of 2021. Skilled in React.js, Next.js, Tailwind CSS, TypeScript, JavaScript, Sass, and jQuery.</p>
+          <p className="text-white text-sm mt-4 sm:mt-6">Professional Frontend Developer with three years of relevant experience. Graduated from California State University, Sacramento with a B.S. in Computer Science in May of 2021. Skilled in React.js, Next.js, Tailwind CSS, TypeScript, JavaScript, Sass, and jQuery.</p>
         </div>
       </div>
 
