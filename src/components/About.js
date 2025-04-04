@@ -1,7 +1,7 @@
 import React from "react";
 
 import TextTransition, { presets } from 'react-text-transition';
-const TEXTS = ['Front-End Developer', 'Responsive Web Designer', 'UI/UX Designer'];
+const TEXTS = ['Frontend Developer', 'Responsive Web Designer', 'UI/UX Designer'];
 
 import {BsLinkedin} from "react-icons/bs";
 import {AiFillGithub} from "react-icons/ai";
@@ -27,7 +27,7 @@ const About = () => {
                 <div className="text-center sm:max-w-[515px] md:max-w-[635px] lg:max-w-[inherit] xl:max-w-[700px] sm:text-left sm:mr-10 sm:ml-6 lg:ml-8 lg:mt-4 lg:mr-96 xl:mr-[31em] md:mx-42 xl:ml-20 2xl:ml-24">
                     <h1><span className="mt-2 text-lg md:text-xl 2xl:text-2xl font-bold text-cream block"><TextTransition springConfig={presets.gentle}>{TEXTS[index % TEXTS.length]}</TextTransition></span></h1>
                     <h2 className="text-3xl xs:text-4xl md:text-5xl font-bold text-white">Mitchell Gruner</h2>
-                    <p className="text-md p-4 sm:p-0 sm:pl-4 xs:text-lg md:text-xl 2xl:text-2xl text-white sm:my-4 lg:my-6 sm:border-l-[12px] xl:border-l-[16px] sm:border-cream rounded-tl-lg rounded-bl-lg">Hi! I&apos;m Mitchell, a Front-End Developer with over three years of professional experience. I am passionate about creating mobile-first, responsive websites using React.js, Next.js, Tailwind CSS, TypeScript, and other development frameworks. I earned my Bachelor of Science in Computer Science from Sacramento State in May of 2021, and have been a professional developer ever since. In my freetime, I enjoy playing tennis and pickleball, and absolutely love to travel the world with my girlfriend.</p>
+                    <p className="text-md p-4 sm:p-0 sm:pl-4 xs:text-lg md:text-xl 2xl:text-2xl text-white sm:my-4 lg:my-6 sm:border-l-[12px] xl:border-l-[16px] sm:border-cream rounded-tl-lg rounded-bl-lg">Hi! I&apos;m Mitchell, a professional Frontend Developer at HealthStream with over three years of professional experience. I am passionate about creating mobile-first, responsive websites using React.js, Next.js, Tailwind CSS, TypeScript, and other development frameworks. I earned my Bachelor of Science in Computer Science from Sacramento State in May of 2021, and have been a professional developer ever since. In my freetime, I enjoy playing tennis and pickleball, and absolutely love to travel the world with my girlfriend.</p>
                 </div>
                 <div className="flex justify-around sm:justify-start mx-14 mb-10 xs:mt-0 xs:mx-24 xs:mb-6 sm:mx-8 md:mx-8 lg:mx-10 xl:mx-20 2xl:mx-24 mt-2 2xl:mt-4 2xl:mb-12">
                     <a href="https://github.com/MitchellGruner">
