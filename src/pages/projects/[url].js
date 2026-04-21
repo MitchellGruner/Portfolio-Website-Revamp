@@ -20,9 +20,8 @@ export function getStaticPaths() {
             {params: {url: "averys-pet-sitting"}},
             {params: {url: "quiz-list"}},
             {params: {url: "little-lemon"}},
+            {params: {url: "checklist"}},
             {params: {url: "rebate-center"}},
-            {params: {url: "cart-page"}},
-            {params: {url: "product-details-card"}},
         ],
         fallback: false,
     }
