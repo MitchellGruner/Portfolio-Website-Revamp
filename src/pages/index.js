@@ -58,8 +58,8 @@ const Home = (props) => {
 
       <About />
       <div className="2xl:max-w-screen-2xl m-auto pt-28">
-        <Projects productDetails={props} />
         <WorkProjects productDetails={props} />
+        <Projects productDetails={props} />
         <ChakraProvider>
           <AppContainer>
             <Contact />

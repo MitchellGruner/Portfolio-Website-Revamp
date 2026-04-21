@@ -43,12 +43,11 @@
   },
   {
     "id": 4,
-    "url": "cart-page",
-    "image": "cart-page-thumbnail3.jpg",
-    "alt": "Cart Page",
-    "title": "Cart Page",
-    "description": "Overhauled the cart page following a Figma wireframe designed by graphic designers. Used HTML and CSS for the structure and styling, as well as JavaScript for DOM manipulation. Created a modal for end users to select an installation service based on products in their cart. Implemented AJAX to update content from the cart page.",
-    "video": "https://www.youtube.com/watch?v=lsxNmd312og"
+    "url": "checklist",
+    "image": "health-stream-checklist.png",
+    "alt": "Checklist",
+    "title": "Checklist",
+    "description": "I led the overhaul of HealthStream's award-winning Checklist platform, used by over one million healthcare professionals worldwide. I helped build the application from the ground up using React, TypeScript, Tailwind CSS, and JavaScript, guiding it from initial development through production release. The platform enabled evaluators to manage participants, assign checklists, attach feedback, and apply structured response options like 'pass' or 'fail' within dynamic session workflows. I also developed features that allowed evaluators to rename sessions, track progress through labeled session states, and seamlessly interact with backend services. To support a smooth user experience, I initially implemented session-based state management and later transitioned to fully integrated API-driven data flows, ensuring that user progress persisted reliably across sessions and locations."
   },
   {
     "id": 5,
@@ -58,14 +57,5 @@
     "title": "Rebate Center Page",
     "description": "A revamped version of the Rebate Center page on Electronic Express's website. This page was built using HTML and CSS, JavaScript, and jQuery, and communicates with a JSON file to display the rebate information. Data that was fetched from the JSON file gets sent to a hash table, which is then dynamically iterated over with memory allocation in mind. Users can filter the rebates by category and/or brand, and their selection can be reset by clicking on the 'remove' button.",
     "video": "https://youtu.be/nya4sCwp3HU"
-  },
-  {
-    "id": 6,
-    "url": "product-details-card",
-    "image": "pdp-image.png",
-    "alt": "Product Details Card Image",
-    "title": "Product Details Card",
-    "description": "Vastly improved the product details card for every product on the website, following a Figma wireframe from the graphic designers; this was achieved using HTML, CSS, and JavaScript. Also created the current hamburger menu on our website using CSS animations and Bootstrap. Implemented a new financing feature that utilizes the MutationObserver JavaScript API to determine the lowest monthly financing option for each and every product on the website.",
-    "video": "https://www.youtube.com/watch?v=FaK_V7UWj1w"
   }
 ]
