@@ -11,7 +11,7 @@ import {useState} from "react";
 import {sendContactForm} from "../lib/api";
 
 import Image from "next/image";
-import ContactImage from "../../public/static/images/profilelookingdown.png";
+import ContactImage from "../../public/static/images/Mitchell_Gruner_Professional_Headshot_Cropped.jpg";
 
 import {BsPhone} from "react-icons/bs";
 import {AiOutlineMail} from "react-icons/ai";
@@ -123,11 +123,7 @@ const Contact = () => {
             <span className="text-white text-xl sm:text-2xl mr-2 sm:mr-4"><AiOutlineMail /></span>
             <a href="mailto:mit.gruner@gmail.com" className="text-black font-bold">mit.gruner@gmail.com</a>
           </div>
-          <div className="flex my-1">
-            <span className="text-white text-xl sm:text-2xl mr-2 sm:mr-4"><BsBuilding /></span>
-            <a href="https://www.google.com/maps/place/HealthStream/@36.1635151,-86.791141,17z/data=!4m15!1m8!3m7!1s0x8864668aac87681b:0xd7d75bd2bfa3c67e!2sHealthStream!8m2!3d36.1637768!4d-86.7912083!10e5!16s%2Fg%2F1tk_kfzl!3m5!1s0x8864668aac87681b:0xd7d75bd2bfa3c67e!8m2!3d36.1637768!4d-86.7912083!16s%2Fg%2F1tk_kfzl?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" className="text-black font-bold">HealthStream</a>
-          </div>
-          <p className="text-white text-sm mt-4 sm:mt-6">Professional Frontend Developer with three years of relevant experience. Graduated from California State University, Sacramento with a B.S. in Computer Science in May of 2021. Skilled in React.js, Next.js, Tailwind CSS, TypeScript, JavaScript, Sass, and jQuery.</p>
+          <p className="text-white text-sm mt-4 sm:mt-6">Professional Front-End Developer with 4+ years of relevant experience. Graduated from California State University, Sacramento with a B.S. in Computer Science in May of 2021. Skilled in React, Next.js, Tailwind CSS, TypeScript, and JavaScript.</p>
         </div>
       </div>
 
